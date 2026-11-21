@@ -1,0 +1,18 @@
+{"step": 1, "kind": "log", "body": {"id": "l1", "meter": "m7", "boot": "b9", "start": 0, "end": 180, "state": "use", "rev": 1}}
+{"step": 1, "kind": "log", "body": {"id": "l2", "meter": "m7", "boot": "b9", "start": 30, "end": 110, "state": "use", "rev": 1}}
+{"step": 1, "kind": "log", "body": {"id": "l3", "meter": "m7", "boot": "b9", "start": 70, "end": 80, "state": "cal", "rev": 1}}
+{"step": 1, "kind": "log", "body": {"id": "l4", "meter": "m2", "boot": "b3", "start": 0, "end": 100, "state": "use", "rev": 1}}
+{"step": 1, "kind": "clock", "body": {"meter": "m7", "boot": "b9", "zero": "2026-10-31T23:58:50Z", "from_tick": 0, "to_tick": 180, "rev": 1}}
+{"step": 1, "kind": "clock", "body": {"meter": "m2", "boot": "b3", "zero": "2026-10-31T23:59:05Z", "from_tick": 0, "to_tick": 100, "rev": 1}}
+{"step": 1, "kind": "lease", "body": {"id": "a7", "meter": "m7", "contract": "A", "start": "2026-10-31T22:00:00Z", "end": "2026-11-01T00:03:00Z", "share": 100, "group": null, "rev": 1}}
+{"step": 1, "kind": "lease", "body": {"id": "b7", "meter": "m7", "contract": "B", "start": "2026-10-31T23:58:55Z", "end": "2026-10-31T23:59:15Z", "share": 100, "group": null, "rev": 1}}
+{"step": 1, "kind": "lease", "body": {"id": "a2", "meter": "m2", "contract": "A", "start": "2026-10-31T23:00:00Z", "end": "2026-11-01T00:05:00Z", "share": 60, "group": "split-2", "rev": 1}}
+{"step": 1, "kind": "lease", "body": {"id": "b2", "meter": "m2", "contract": "B", "start": "2026-10-31T23:00:00Z", "end": "2026-11-01T00:05:00Z", "share": 40, "group": "split-2", "rev": 1}}
+{"step": 1, "kind": "rate", "body": {"contract": "A", "start": "2026-10-01T00:00:00Z", "end": "2026-11-01T00:00:00Z", "cents_per_sec": "1.25", "free_seconds": 50}}
+{"step": 1, "kind": "rate", "body": {"contract": "A", "start": "2026-11-01T00:00:00Z", "end": "2027-01-01T00:00:00Z", "cents_per_sec": "1.50", "free_seconds": 30}}
+{"step": 1, "kind": "rate", "body": {"contract": "B", "start": "2026-10-01T00:00:00Z", "end": "2027-01-01T00:00:00Z", "cents_per_sec": "0.75", "free_seconds": 10}}
+{"step": 2, "kind": "close", "body": {"id": "oct", "month": "2026-10", "allowed_holds": [["m7", "2026-10-31T23:58:55Z", "2026-10-31T23:59:15Z"]]}}
+{"step": 3, "kind": "clock", "body": {"meter": "m7", "boot": "b9", "zero": "2026-10-31T23:59:25Z", "from_tick": 0, "to_tick": 180, "rev": 2}}
+{"step": 4, "kind": "lease", "body": {"id": "b7", "meter": "m7", "contract": "B", "start": "2026-10-31T23:59:54Z", "end": "2026-11-01T00:00:13Z", "share": 100, "group": null, "rev": 2}}
+{"step": 4, "kind": "posted", "body": {"id": "erp-631", "contract": "A", "for_month": "2026-10", "book_month": "2026-11", "amount_cents": -10, "origin": "external-invoice-6"}}
+{"step": 5, "kind": "close", "body": {"id": "nov", "month": "2026-11", "allowed_holds": [["m7", "2026-11-01T00:00:00Z", "2026-11-01T00:00:13Z"]]}}
