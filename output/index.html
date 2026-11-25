@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>共享仪器计费事实仓</title>
+<style>
+:root { color-scheme: light; }
+body { font-family: -apple-system, "Segoe UI", "Noto Sans CJK SC", sans-serif; margin: 2rem; color:#17202a; background:#f7f9fb; }
+h1,h2,h3 { line-height:1.35; }
+table { border-collapse:collapse; width:100%; background:white; margin:.75rem 0 1.5rem; font-size:.9rem; }
+th,td { border:1px solid #d9e1e8; padding:.45rem .55rem; vertical-align:top; text-align:left; }
+th { background:#eef3f7; }
+.card { background:white; border:1px solid #d9e1e8; border-radius:10px; padding:1rem; margin:1rem 0; }
+.badge { border-radius:999px; padding:.1rem .55rem; font-size:.78rem; background:#fff3cd; }
+.badge.posted { background:#d1e7dd; } .badge.partially_posted { background:#cfe2ff; }
+pre { background:#102030; color:#e8eef4; padding:1rem; border-radius:8px; overflow:auto; font-size:.78rem; }
+.muted { color:#5b6b7b; }
+</style></head><body>
+<h1>共享仪器计费事实与封账更正</h1>
+<p class="muted">UTC 半开区间；精确分量见 JSON/SQLite。本页由交换资料离线生成。</p>
+<h2>设备管理员：统一时间与待查</h2>
+<table><thead><tr><th>设备</th><th>启动</th><th>开始</th><th>结束</th><th>秒</th><th>状态</th><th>有效用量</th><th>采用源</th><th>佐证源</th></tr></thead><tbody><tr><td>m2</td><td>b3</td><td>2026-10-31T23:59:05Z</td><td>2026-11-01T00:00:45Z</td><td>100</td><td>use</td><td>是</td><td>l4</td><td>l4</td></tr><tr><td>m7</td><td>b9</td><td>2026-10-31T23:59:25Z</td><td>2026-11-01T00:00:35Z</td><td>70</td><td>use</td><td>是</td><td>l1</td><td>l1, l2</td></tr><tr><td>m7</td><td>b9</td><td>2026-11-01T00:00:35Z</td><td>2026-11-01T00:00:45Z</td><td>10</td><td>cal</td><td>否</td><td>l3</td><td>l1, l2, l3</td></tr><tr><td>m7</td><td>b9</td><td>2026-11-01T00:00:45Z</td><td>2026-11-01T00:02:25Z</td><td>100</td><td>use</td><td>是</td><td>l1</td><td>l1, l2</td></tr></tbody></table>
+<h3>未认领 / 待查区间</h3>
+<table><thead><tr><th>类型</th><th>设备</th><th>开始</th><th>结束</th><th>性质</th><th>租约</th><th>说明</th></tr></thead><tbody><tr><td>lease_conflict</td><td>m7</td><td>2026-10-31T23:59:54Z</td><td>2026-11-01T00:00:13Z</td><td>阻断封账</td><td>a7, b7</td><td>valid dedicated/group leases collide; usage is preserved but not chosen</td></tr></tbody></table>
+<h2>财务：账单行与覆盖依据</h2>
+<table><thead><tr><th>账单行</th><th>合同</th><th>费用月</th><th>入账月</th><th>分摊秒</th><th>免费秒</th><th>计费秒</th><th>精确金额(分)</th><th>发票(分)</th><th>覆盖与额度</th></tr></thead><tbody><tr><td>LINE-2026-10-A-20261001T000000Z-20261101T000000Z</td><td>A</td><td>2026-10</td><td>2026-10</td><td>62.0</td><td>50.0</td><td>12.0</td><td>15.000</td><td>15</td><td>m2 2026-10-31T23:59:05Z→2026-11-01T00:00:00Z alloc=33.0 free=26.4<br>m7 2026-10-31T23:59:25Z→2026-10-31T23:59:54Z alloc=29 free=23.6</td></tr><tr><td>LINE-2026-10-B-20261001T000000Z-20270101T000000Z</td><td>B</td><td>2026-10</td><td>2026-10</td><td>22.0</td><td>10.0</td><td>12.0</td><td>9.000</td><td>9</td><td>m2 2026-10-31T23:59:05Z→2026-11-01T00:00:00Z alloc=22.0 free=10.0</td></tr><tr><td>LINE-2026-11-A-20261101T000000Z-20270101T000000Z</td><td>A</td><td>2026-11</td><td>2026-11</td><td>149.0</td><td>30.0</td><td>119.0</td><td>178.500</td><td>179</td><td>m2 2026-11-01T00:00:00Z→2026-11-01T00:00:45Z alloc=27.0 free=16.2<br>m7 2026-11-01T00:00:13Z→2026-11-01T00:00:35Z alloc=22 free=13.8<br>m7 2026-11-01T00:00:45Z→2026-11-01T00:02:25Z alloc=100 free=0</td></tr><tr><td>LINE-2026-11-B-20261001T000000Z-20270101T000000Z</td><td>B</td><td>2026-11</td><td>2026-11</td><td>18.0</td><td>10.0</td><td>8.0</td><td>6.000</td><td>6</td><td>m2 2026-11-01T00:00:00Z→2026-11-01T00:00:45Z alloc=18.0 free=10.0</td></tr></tbody></table>
+<h2>封账月对账</h2>
+<table><thead><tr><th>费用月</th><th>合同</th><th>原账</th><th>更正后旧月应收</th><th>已入账</th><th>原账-已入账</th><th>更正应收-已入账</th><th>分录净额</th><th>未入账净额</th></tr></thead><tbody><tr><td>2026-10</td><td>A</td><td>41</td><td>15</td><td>-10</td><td>51</td><td>25</td><td>25</td><td>25</td></tr><tr><td>2026-10</td><td>B</td><td>9</td><td>9</td><td>0</td><td>9</td><td>9</td><td>9</td><td>9</td></tr><tr><td>2026-11</td><td>A</td><td>179</td><td>179</td><td>0</td><td>179</td><td>179</td><td>0</td><td>0</td></tr><tr><td>2026-11</td><td>B</td><td>6</td><td>6</td><td>0</td><td>6</td><td>6</td><td>0</td><td>0</td></tr></tbody></table>
+<h2>待记 / 已记分录</h2>
+<section class='card'><h3>J-ADJ-2026-10-A-nov <span class='badge pending_posting'>pending_posting</span></h3><p>Compare the corrected complete receivable for the original month with amounts actually posted; post this signed supplement/reversal in the next open book month.</p><p><b>25 分</b>；封账后已关联入账 0；未入账 <b>25</b></p><pre>{
+  &quot;original_close_id&quot;: &quot;oct&quot;,
+  &quot;original_receivable_cents&quot;: 41,
+  &quot;original_exact_receivable_cents&quot;: &quot;41.250&quot;,
+  &quot;corrected_receivable_cents&quot;: 15,
+  &quot;corrected_exact_receivable_cents&quot;: &quot;15.000&quot;,
+  &quot;posted_cents_at_calculation&quot;: -10,
+  &quot;net_amount_cents&quot;: 25,
+  &quot;net_exact_before_line_rounding_cents&quot;: &quot;25.000&quot;,
+  &quot;memo_booking_gap_original_minus_posted_cents&quot;: 51,
+  &quot;memo_fact_correction_corrected_minus_original_cents&quot;: -26,
+  &quot;memo_components&quot;: [
+    {
+      &quot;component&quot;: &quot;original_account_vs_posted&quot;,
+      &quot;amount_cents&quot;: 51,
+      &quot;meaning&quot;: &quot;Would make posted ledger equal the original close account.&quot;
+    },
+    {
+      &quot;component&quot;: &quot;closed_month_fact_correction&quot;,
+      &quot;amount_cents&quot;: -26,
+      &quot;meaning&quot;: &quot;Old-rate correction from original account to current old-month recomputation.&quot;
+    }
+  ],
+  &quot;old_rates_only&quot;: true,
+  &quot;posted_receipts&quot;: [
+    {
+      &quot;receipt_id&quot;: &quot;erp-631&quot;,
+      &quot;seq&quot;: 17,
+      &quot;book_month&quot;: &quot;2026-11&quot;,
+      &quot;amount_cents&quot;: -10,
+      &quot;origin&quot;: &quot;external-invoice-6&quot;
+    }
+  ],
+  &quot;original_line_ids&quot;: [
+    &quot;LINE-2026-10-A-20261001T000000Z-20261101T000000Z&quot;
+  ],
+  &quot;corrected_line_ids&quot;: [
+    &quot;LINE-2026-10-A-20261001T000000Z-20261101T000000Z&quot;
+  ],
+  &quot;corrected_lines_at_calculation&quot;: [
+    {
+      &quot;line_id&quot;: &quot;LINE-2026-10-A-20261001T000000Z-20261101T000000Z&quot;,
+      &quot;kind&quot;: &quot;usage&quot;,
+      &quot;contract&quot;: &quot;A&quot;,
+      &quot;for_month&quot;: &quot;2026-10&quot;,
+      &quot;book_month&quot;: &quot;2026-10&quot;,
+      &quot;rate&quot;: {
+        &quot;start&quot;: &quot;2026-10-01T00:00:00Z&quot;,
+        &quot;end&quot;: &quot;2026-11-01T00:00:00Z&quot;,
+        &quot;cents_per_sec&quot;: &quot;1.25&quot;
+      },
+      &quot;exact_allocated_seconds&quot;: &quot;62.0&quot;,
+      &quot;free_seconds&quot;: &quot;50.0&quot;,
+      &quot;billable_seconds&quot;: &quot;12.0&quot;,
+      &quot;exact_amount_cents&quot;: &quot;15.000&quot;,
+      &quot;invoice_amount_cents&quot;: 15,
+      &quot;coverage&quot;: [
+        {
+          &quot;atom_id&quot;: &quot;atom:resp:b3:0-100:1793491145-1793491245:a2:1793491145-1793491200&quot;,
+          &quot;fact_id&quot;: &quot;fact:m2:b3:0-100&quot;,
+          &quot;meter&quot;: &quot;m2&quot;,
+          &quot;source_id&quot;: &quot;l4&quot;,
+          &quot;source_ids&quot;: [
+            &quot;l4&quot;
+          ],
+          &quot;source_coverage&quot;: [
+            {
+              &quot;source_id&quot;: &quot;l4&quot;,
+              &quot;start&quot;: &quot;2026-10-31T23:59:05Z&quot;,
+              &quot;end&quot;: &quot;2026-11-01T00:00:45Z&quot;
+            }
+          ],
+          &quot;lease_id&quot;: &quot;a2&quot;,
+          &quot;start&quot;: &quot;2026-10-31T23:59:05Z&quot;,
+          &quot;end&quot;: &quot;2026-11-01T00:00:00Z&quot;,
+          &quot;device_seconds&quot;: 55,
+          &quot;share_percent&quot;: &quot;60&quot;,
+          &quot;allocated_seconds&quot;: &quot;33.0&quot;,
+          &quot;free_seconds&quot;: &quot;26.4&quot;,
+          &quot;billable_seconds&quot;: &quot;6.6&quot;
+        },
+        {
+          &quot;atom_id&quot;: &quot;atom:resp:b9:0-70:1793491165-1793491194:a7:1793491165-1793491194&quot;,
+          &quot;fact_id&quot;: &quot;fact:m7:b9:0-70&quot;,
+          &quot;meter&quot;: &quot;m7&quot;,
+          &quot;source_id&quot;: &quot;l1&quot;,
+          &quot;source_ids&quot;: [
+            &quot;l1&quot;,
+            &quot;l2&quot;
+          ],
+          &quot;source_coverage&quot;: [
+            {
+              &quot;source_id&quot;: &quot;l1&quot;,
+              &quot;start&quot;: &quot;2026-10-31T23:59:25Z&quot;,
+              &quot;end&quot;: &quot;2026-11-01T00:00:35Z&quot;
+            },
+            {
+              &quot;source_id&quot;: &quot;l2&quot;,
+              &quot;start&quot;: &quot;2026-10-31T23:59:55Z&quot;,
+              &quot;end&quot;: &quot;2026-11-01T00:00:35Z&quot;
+            }
+          ],
+          &quot;lease_id&quot;: &quot;a7&quot;,
+          &quot;start&quot;: &quot;2026-10-31T23:59:25Z&quot;,
+          &quot;end&quot;: &quot;2026-10-31T23:59:54Z&quot;,
+          &quot;device_seconds&quot;: 29,
+          &quot;share_percent&quot;: &quot;100&quot;,
+          &quot;allocated_seconds&quot;: &quot;29&quot;,
+          &quot;free_seconds&quot;: &quot;23.6&quot;,
+          &quot;billable_seconds&quot;: &quot;5.4&quot;
+        }
+      ],
+      &quot;basis&quot;: [
+        &quot;half-open [start,end); overlapping logs deduplicated by state priority&quot;,
+        &quot;lease shares retained as exact Decimal fractions&quot;,
+        &quot;free quota ordered by occurrence second, meter, source id&quot;,
+        &quot;line total rounded once with ROUND_HALF_UP to whole cents&quot;
+      ]
+    }
+  ]
+}</pre></section><section class='card'><h3>J-ADJ-2026-10-B-nov <span class='badge pending_posting'>pending_posting</span></h3><p>Compare the corrected complete receivable for the original month with amounts actually posted; post this signed supplement/reversal in the next open book month.</p><p><b>9 分</b>；封账后已关联入账 0；未入账 <b>9</b></p><pre>{
+  &quot;original_close_id&quot;: &quot;oct&quot;,
+  &quot;original_receivable_cents&quot;: 9,
+  &quot;original_exact_receivable_cents&quot;: &quot;9.000&quot;,
+  &quot;corrected_receivable_cents&quot;: 9,
+  &quot;corrected_exact_receivable_cents&quot;: &quot;9.000&quot;,
+  &quot;posted_cents_at_calculation&quot;: 0,
+  &quot;net_amount_cents&quot;: 9,
+  &quot;net_exact_before_line_rounding_cents&quot;: &quot;9.000&quot;,
+  &quot;memo_booking_gap_original_minus_posted_cents&quot;: 9,
+  &quot;memo_fact_correction_corrected_minus_original_cents&quot;: 0,
+  &quot;memo_components&quot;: [
+    {
+      &quot;component&quot;: &quot;original_account_vs_posted&quot;,
+      &quot;amount_cents&quot;: 9,
+      &quot;meaning&quot;: &quot;Would make posted ledger equal the original close account.&quot;
+    },
+    {
+      &quot;component&quot;: &quot;closed_month_fact_correction&quot;,
+      &quot;amount_cents&quot;: 0,
+      &quot;meaning&quot;: &quot;Old-rate correction from original account to current old-month recomputation.&quot;
+    }
+  ],
+  &quot;old_rates_only&quot;: true,
+  &quot;posted_receipts&quot;: [],
+  &quot;original_line_ids&quot;: [
+    &quot;LINE-2026-10-B-20261001T000000Z-20270101T000000Z&quot;
+  ],
+  &quot;corrected_line_ids&quot;: [
+    &quot;LINE-2026-10-B-20261001T000000Z-20270101T000000Z&quot;
+  ],
+  &quot;corrected_lines_at_calculation&quot;: [
+    {
+      &quot;line_id&quot;: &quot;LINE-2026-10-B-20261001T000000Z-20270101T000000Z&quot;,
+      &quot;kind&quot;: &quot;usage&quot;,
+      &quot;contract&quot;: &quot;B&quot;,
+      &quot;for_month&quot;: &quot;2026-10&quot;,
+      &quot;book_month&quot;: &quot;2026-10&quot;,
+      &quot;rate&quot;: {
+        &quot;start&quot;: &quot;2026-10-01T00:00:00Z&quot;,
+        &quot;end&quot;: &quot;2027-01-01T00:00:00Z&quot;,
+        &quot;cents_per_sec&quot;: &quot;0.75&quot;
+      },
+      &quot;exact_allocated_seconds&quot;: &quot;22.0&quot;,
+      &quot;free_seconds&quot;: &quot;10.0&quot;,
+      &quot;billable_seconds&quot;: &quot;12.0&quot;,
+      &quot;exact_amount_cents&quot;: &quot;9.000&quot;,
+      &quot;invoice_amount_cents&quot;: 9,
+      &quot;coverage&quot;: [
+        {
+          &quot;atom_id&quot;: &quot;atom:resp:b3:0-100:1793491145-1793491245:b2:1793491145-1793491200&quot;,
+          &quot;fact_id&quot;: &quot;fact:m2:b3:0-100&quot;,
+          &quot;meter&quot;: &quot;m2&quot;,
+          &quot;source_id&quot;: &quot;l4&quot;,
+          &quot;source_ids&quot;: [
+            &quot;l4&quot;
+          ],
+          &quot;source_coverage&quot;: [
+            {
+              &quot;source_id&quot;: &quot;l4&quot;,
+              &quot;start&quot;: &quot;2026-10-31T23:59:05Z&quot;,
+              &quot;end&quot;: &quot;2026-11-01T00:00:45Z&quot;
+            }
+          ],
+          &quot;lease_id&quot;: &quot;b2&quot;,
+          &quot;start&quot;: &quot;2026-10-31T23:59:05Z&quot;,
+          &quot;end&quot;: &quot;2026-11-01T00:00:00Z&quot;,
+          &quot;device_seconds&quot;: 55,
+          &quot;share_percent&quot;: &quot;40&quot;,
+          &quot;allocated_seconds&quot;: &quot;22.0&quot;,
+          &quot;free_seconds&quot;: &quot;10.0&quot;,
+          &quot;billable_seconds&quot;: &quot;12.0&quot;
+        }
+      ],
+      &quot;basis&quot;: [
+        &quot;half-open [start,end); overlapping logs deduplicated by state priority&quot;,
+        &quot;lease shares retained as exact Decimal fractions&quot;,
+        &quot;free quota ordered by occurrence second, meter, source id&quot;,
+        &quot;line total rounded once with ROUND_HALF_UP to whole cents&quot;
+      ]
+    }
+  ]
+}</pre></section>
+</body></html>

@@ -1,0 +1,183 @@
+{
+  "closed_months": {
+    "2026-10": {
+      "close_id": "oct",
+      "original_receivable_by_contract_cents": {
+        "A": 41,
+        "B": 9
+      },
+      "adjustment_net_by_contract_cents": {},
+      "close_period_total_by_contract_cents": {
+        "A": 41,
+        "B": 9
+      }
+    },
+    "2026-11": {
+      "close_id": "nov",
+      "original_receivable_by_contract_cents": {
+        "A": 179,
+        "B": 6
+      },
+      "adjustment_net_by_contract_cents": {
+        "A": 25,
+        "B": 9
+      },
+      "close_period_total_by_contract_cents": {
+        "A": 204,
+        "B": 15
+      }
+    }
+  },
+  "current_invoice_lines": [
+    {
+      "line_id": "LINE-2026-10-A-20261001T000000Z-20261101T000000Z",
+      "contract": "A",
+      "for_month": "2026-10",
+      "invoice_amount_cents": 15,
+      "exact_amount_cents": "15.000",
+      "billable_seconds": "12.0"
+    },
+    {
+      "line_id": "LINE-2026-10-B-20261001T000000Z-20270101T000000Z",
+      "contract": "B",
+      "for_month": "2026-10",
+      "invoice_amount_cents": 9,
+      "exact_amount_cents": "9.000",
+      "billable_seconds": "12.0"
+    },
+    {
+      "line_id": "LINE-2026-11-A-20261101T000000Z-20270101T000000Z",
+      "contract": "A",
+      "for_month": "2026-11",
+      "invoice_amount_cents": 179,
+      "exact_amount_cents": "178.500",
+      "billable_seconds": "119.0"
+    },
+    {
+      "line_id": "LINE-2026-11-B-20261001T000000Z-20270101T000000Z",
+      "contract": "B",
+      "for_month": "2026-11",
+      "invoice_amount_cents": 6,
+      "exact_amount_cents": "6.000",
+      "billable_seconds": "8.0"
+    }
+  ],
+  "closed_month_positions": [
+    {
+      "for_month": "2026-10",
+      "contract": "A",
+      "close_id": "oct",
+      "original_receivable_cents": 41,
+      "current_old_rate_corrected_receivable_cents": 15,
+      "posted_cents": -10,
+      "original_minus_posted_cents": 51,
+      "corrected_minus_posted_cents": 25,
+      "fact_delta_cents": -26,
+      "journal_entry_amount_cents": 25,
+      "unposted_journal_amount_cents": 25,
+      "journal_entry_ids": [
+        "J-ADJ-2026-10-A-nov"
+      ],
+      "posted_receipt_ids": [
+        "erp-631"
+      ]
+    },
+    {
+      "for_month": "2026-10",
+      "contract": "B",
+      "close_id": "oct",
+      "original_receivable_cents": 9,
+      "current_old_rate_corrected_receivable_cents": 9,
+      "posted_cents": 0,
+      "original_minus_posted_cents": 9,
+      "corrected_minus_posted_cents": 9,
+      "fact_delta_cents": 0,
+      "journal_entry_amount_cents": 9,
+      "unposted_journal_amount_cents": 9,
+      "journal_entry_ids": [
+        "J-ADJ-2026-10-B-nov"
+      ],
+      "posted_receipt_ids": []
+    },
+    {
+      "for_month": "2026-11",
+      "contract": "A",
+      "close_id": "nov",
+      "original_receivable_cents": 179,
+      "current_old_rate_corrected_receivable_cents": 179,
+      "posted_cents": 0,
+      "original_minus_posted_cents": 179,
+      "corrected_minus_posted_cents": 179,
+      "fact_delta_cents": 0,
+      "journal_entry_amount_cents": 0,
+      "unposted_journal_amount_cents": 0,
+      "journal_entry_ids": [],
+      "posted_receipt_ids": []
+    },
+    {
+      "for_month": "2026-11",
+      "contract": "B",
+      "close_id": "nov",
+      "original_receivable_cents": 6,
+      "current_old_rate_corrected_receivable_cents": 6,
+      "posted_cents": 0,
+      "original_minus_posted_cents": 6,
+      "corrected_minus_posted_cents": 6,
+      "fact_delta_cents": 0,
+      "journal_entry_amount_cents": 0,
+      "unposted_journal_amount_cents": 0,
+      "journal_entry_ids": [],
+      "posted_receipt_ids": []
+    }
+  ],
+  "journal_entries": [
+    {
+      "entry_id": "J-ADJ-2026-10-A-nov",
+      "kind": "closed_month_reconciliation",
+      "for_month": "2026-10",
+      "book_month": "2026-11",
+      "contract": "A",
+      "amount_cents": 25,
+      "booked_after_creation_cents": 0,
+      "unposted_amount_cents": 25,
+      "status": "pending_posting"
+    },
+    {
+      "entry_id": "J-ADJ-2026-10-B-nov",
+      "kind": "closed_month_reconciliation",
+      "for_month": "2026-10",
+      "book_month": "2026-11",
+      "contract": "B",
+      "amount_cents": 9,
+      "booked_after_creation_cents": 0,
+      "unposted_amount_cents": 9,
+      "status": "pending_posting"
+    }
+  ],
+  "unclaimed": [],
+  "pending": [
+    {
+      "issue_id": "ISS-e5ac55f75b84",
+      "kind": "lease_conflict",
+      "blocking": true,
+      "meter": "m7",
+      "start": "2026-10-31T23:59:54Z",
+      "end": "2026-11-01T00:00:13Z",
+      "source_ids": [
+        "l1",
+        "l2"
+      ],
+      "lease_ids": [
+        "a7",
+        "b7"
+      ],
+      "contracts": [
+        "A",
+        "B"
+      ],
+      "fact_id": "fact:m7:b9:0-70",
+      "message": "valid dedicated/group leases collide; usage is preserved but not chosen",
+      "unclaimed_seconds": "0"
+    }
+  ]
+}

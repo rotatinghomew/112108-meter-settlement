@@ -1,0 +1,3422 @@
+{
+  "admin": {
+    "unclaimed": [],
+    "pending": [
+      {
+        "issue_id": "ISS-e5ac55f75b84",
+        "kind": "lease_conflict",
+        "blocking": true,
+        "meter": "m7",
+        "start": "2026-10-31T23:59:54Z",
+        "end": "2026-11-01T00:00:13Z",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "lease_ids": [
+          "a7",
+          "b7"
+        ],
+        "contracts": [
+          "A",
+          "B"
+        ],
+        "fact_id": "fact:m7:b9:0-70",
+        "message": "valid dedicated/group leases collide; usage is preserved but not chosen",
+        "unclaimed_seconds": "0"
+      }
+    ],
+    "timeline": [
+      {
+        "fact_id": "fact:m2:b3:0-100",
+        "meter": "m2",
+        "boot": "b3",
+        "tick_start": 0,
+        "tick_end": 100,
+        "start_ts": 1793491145,
+        "end_ts": 1793491245,
+        "start": "2026-10-31T23:59:05Z",
+        "end": "2026-11-01T00:00:45Z",
+        "seconds": 100,
+        "state": "use",
+        "effective_use": true,
+        "source_id": "l4",
+        "source_ids": [
+          "l4"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l4",
+            "start": "2026-10-31T23:59:05Z",
+            "end": "2026-11-01T00:00:45Z"
+          }
+        ],
+        "clock_rev": 1
+      },
+      {
+        "fact_id": "fact:m7:b9:0-70",
+        "meter": "m7",
+        "boot": "b9",
+        "tick_start": 0,
+        "tick_end": 70,
+        "start_ts": 1793491165,
+        "end_ts": 1793491235,
+        "start": "2026-10-31T23:59:25Z",
+        "end": "2026-11-01T00:00:35Z",
+        "seconds": 70,
+        "state": "use",
+        "effective_use": true,
+        "source_id": "l1",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-10-31T23:59:25Z",
+            "end": "2026-11-01T00:00:35Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-10-31T23:59:55Z",
+            "end": "2026-11-01T00:00:35Z"
+          }
+        ],
+        "clock_rev": 2
+      },
+      {
+        "fact_id": "fact:m7:b9:70-80",
+        "meter": "m7",
+        "boot": "b9",
+        "tick_start": 70,
+        "tick_end": 80,
+        "start_ts": 1793491235,
+        "end_ts": 1793491245,
+        "start": "2026-11-01T00:00:35Z",
+        "end": "2026-11-01T00:00:45Z",
+        "seconds": 10,
+        "state": "cal",
+        "effective_use": false,
+        "source_id": "l3",
+        "source_ids": [
+          "l1",
+          "l2",
+          "l3"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-11-01T00:00:35Z",
+            "end": "2026-11-01T00:00:45Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-11-01T00:00:35Z",
+            "end": "2026-11-01T00:00:45Z"
+          },
+          {
+            "source_id": "l3",
+            "start": "2026-11-01T00:00:35Z",
+            "end": "2026-11-01T00:00:45Z"
+          }
+        ],
+        "clock_rev": 2
+      },
+      {
+        "fact_id": "fact:m7:b9:80-180",
+        "meter": "m7",
+        "boot": "b9",
+        "tick_start": 80,
+        "tick_end": 180,
+        "start_ts": 1793491245,
+        "end_ts": 1793491345,
+        "start": "2026-11-01T00:00:45Z",
+        "end": "2026-11-01T00:02:25Z",
+        "seconds": 100,
+        "state": "use",
+        "effective_use": true,
+        "source_id": "l1",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-11-01T00:00:45Z",
+            "end": "2026-11-01T00:02:25Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-11-01T00:00:45Z",
+            "end": "2026-11-01T00:01:15Z"
+          }
+        ],
+        "clock_rev": 2
+      }
+    ]
+  },
+  "finance": {
+    "current_usage_lines": [
+      {
+        "line_id": "LINE-2026-10-A-20261001T000000Z-20261101T000000Z",
+        "kind": "usage",
+        "contract": "A",
+        "for_month": "2026-10",
+        "book_month": "2026-10",
+        "rate": {
+          "start": "2026-10-01T00:00:00Z",
+          "end": "2026-11-01T00:00:00Z",
+          "cents_per_sec": "1.25"
+        },
+        "exact_allocated_seconds": "62.0",
+        "free_seconds": "50.0",
+        "billable_seconds": "12.0",
+        "exact_amount_cents": "15.000",
+        "invoice_amount_cents": 15,
+        "coverage": [
+          {
+            "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491145-1793491200",
+            "fact_id": "fact:m2:b3:0-100",
+            "meter": "m2",
+            "source_id": "l4",
+            "source_ids": [
+              "l4"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l4",
+                "start": "2026-10-31T23:59:05Z",
+                "end": "2026-11-01T00:00:45Z"
+              }
+            ],
+            "lease_id": "a2",
+            "start": "2026-10-31T23:59:05Z",
+            "end": "2026-11-01T00:00:00Z",
+            "device_seconds": 55,
+            "share_percent": "60",
+            "allocated_seconds": "33.0",
+            "free_seconds": "26.4",
+            "billable_seconds": "6.6"
+          },
+          {
+            "atom_id": "atom:resp:b9:0-70:1793491165-1793491194:a7:1793491165-1793491194",
+            "fact_id": "fact:m7:b9:0-70",
+            "meter": "m7",
+            "source_id": "l1",
+            "source_ids": [
+              "l1",
+              "l2"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l1",
+                "start": "2026-10-31T23:59:25Z",
+                "end": "2026-11-01T00:00:35Z"
+              },
+              {
+                "source_id": "l2",
+                "start": "2026-10-31T23:59:55Z",
+                "end": "2026-11-01T00:00:35Z"
+              }
+            ],
+            "lease_id": "a7",
+            "start": "2026-10-31T23:59:25Z",
+            "end": "2026-10-31T23:59:54Z",
+            "device_seconds": 29,
+            "share_percent": "100",
+            "allocated_seconds": "29",
+            "free_seconds": "23.6",
+            "billable_seconds": "5.4"
+          }
+        ],
+        "basis": [
+          "half-open [start,end); overlapping logs deduplicated by state priority",
+          "lease shares retained as exact Decimal fractions",
+          "free quota ordered by occurrence second, meter, source id",
+          "line total rounded once with ROUND_HALF_UP to whole cents"
+        ]
+      },
+      {
+        "line_id": "LINE-2026-10-B-20261001T000000Z-20270101T000000Z",
+        "kind": "usage",
+        "contract": "B",
+        "for_month": "2026-10",
+        "book_month": "2026-10",
+        "rate": {
+          "start": "2026-10-01T00:00:00Z",
+          "end": "2027-01-01T00:00:00Z",
+          "cents_per_sec": "0.75"
+        },
+        "exact_allocated_seconds": "22.0",
+        "free_seconds": "10.0",
+        "billable_seconds": "12.0",
+        "exact_amount_cents": "9.000",
+        "invoice_amount_cents": 9,
+        "coverage": [
+          {
+            "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491145-1793491200",
+            "fact_id": "fact:m2:b3:0-100",
+            "meter": "m2",
+            "source_id": "l4",
+            "source_ids": [
+              "l4"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l4",
+                "start": "2026-10-31T23:59:05Z",
+                "end": "2026-11-01T00:00:45Z"
+              }
+            ],
+            "lease_id": "b2",
+            "start": "2026-10-31T23:59:05Z",
+            "end": "2026-11-01T00:00:00Z",
+            "device_seconds": 55,
+            "share_percent": "40",
+            "allocated_seconds": "22.0",
+            "free_seconds": "10.0",
+            "billable_seconds": "12.0"
+          }
+        ],
+        "basis": [
+          "half-open [start,end); overlapping logs deduplicated by state priority",
+          "lease shares retained as exact Decimal fractions",
+          "free quota ordered by occurrence second, meter, source id",
+          "line total rounded once with ROUND_HALF_UP to whole cents"
+        ]
+      },
+      {
+        "line_id": "LINE-2026-11-A-20261101T000000Z-20270101T000000Z",
+        "kind": "usage",
+        "contract": "A",
+        "for_month": "2026-11",
+        "book_month": "2026-11",
+        "rate": {
+          "start": "2026-11-01T00:00:00Z",
+          "end": "2027-01-01T00:00:00Z",
+          "cents_per_sec": "1.50"
+        },
+        "exact_allocated_seconds": "149.0",
+        "free_seconds": "30.0",
+        "billable_seconds": "119.0",
+        "exact_amount_cents": "178.500",
+        "invoice_amount_cents": 179,
+        "coverage": [
+          {
+            "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491200-1793491245",
+            "fact_id": "fact:m2:b3:0-100",
+            "meter": "m2",
+            "source_id": "l4",
+            "source_ids": [
+              "l4"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l4",
+                "start": "2026-10-31T23:59:05Z",
+                "end": "2026-11-01T00:00:45Z"
+              }
+            ],
+            "lease_id": "a2",
+            "start": "2026-11-01T00:00:00Z",
+            "end": "2026-11-01T00:00:45Z",
+            "device_seconds": 45,
+            "share_percent": "60",
+            "allocated_seconds": "27.0",
+            "free_seconds": "16.2",
+            "billable_seconds": "10.8"
+          },
+          {
+            "atom_id": "atom:resp:b9:0-70:1793491213-1793491235:a7:1793491213-1793491235",
+            "fact_id": "fact:m7:b9:0-70",
+            "meter": "m7",
+            "source_id": "l1",
+            "source_ids": [
+              "l1",
+              "l2"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l1",
+                "start": "2026-10-31T23:59:25Z",
+                "end": "2026-11-01T00:00:35Z"
+              },
+              {
+                "source_id": "l2",
+                "start": "2026-10-31T23:59:55Z",
+                "end": "2026-11-01T00:00:35Z"
+              }
+            ],
+            "lease_id": "a7",
+            "start": "2026-11-01T00:00:13Z",
+            "end": "2026-11-01T00:00:35Z",
+            "device_seconds": 22,
+            "share_percent": "100",
+            "allocated_seconds": "22",
+            "free_seconds": "13.8",
+            "billable_seconds": "8.2"
+          },
+          {
+            "atom_id": "atom:resp:b9:80-180:1793491245-1793491345:a7:1793491245-1793491345",
+            "fact_id": "fact:m7:b9:80-180",
+            "meter": "m7",
+            "source_id": "l1",
+            "source_ids": [
+              "l1",
+              "l2"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l1",
+                "start": "2026-11-01T00:00:45Z",
+                "end": "2026-11-01T00:02:25Z"
+              },
+              {
+                "source_id": "l2",
+                "start": "2026-11-01T00:00:45Z",
+                "end": "2026-11-01T00:01:15Z"
+              }
+            ],
+            "lease_id": "a7",
+            "start": "2026-11-01T00:00:45Z",
+            "end": "2026-11-01T00:02:25Z",
+            "device_seconds": 100,
+            "share_percent": "100",
+            "allocated_seconds": "100",
+            "free_seconds": "0",
+            "billable_seconds": "100"
+          }
+        ],
+        "basis": [
+          "half-open [start,end); overlapping logs deduplicated by state priority",
+          "lease shares retained as exact Decimal fractions",
+          "free quota ordered by occurrence second, meter, source id",
+          "line total rounded once with ROUND_HALF_UP to whole cents"
+        ]
+      },
+      {
+        "line_id": "LINE-2026-11-B-20261001T000000Z-20270101T000000Z",
+        "kind": "usage",
+        "contract": "B",
+        "for_month": "2026-11",
+        "book_month": "2026-11",
+        "rate": {
+          "start": "2026-10-01T00:00:00Z",
+          "end": "2027-01-01T00:00:00Z",
+          "cents_per_sec": "0.75"
+        },
+        "exact_allocated_seconds": "18.0",
+        "free_seconds": "10.0",
+        "billable_seconds": "8.0",
+        "exact_amount_cents": "6.000",
+        "invoice_amount_cents": 6,
+        "coverage": [
+          {
+            "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491200-1793491245",
+            "fact_id": "fact:m2:b3:0-100",
+            "meter": "m2",
+            "source_id": "l4",
+            "source_ids": [
+              "l4"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l4",
+                "start": "2026-10-31T23:59:05Z",
+                "end": "2026-11-01T00:00:45Z"
+              }
+            ],
+            "lease_id": "b2",
+            "start": "2026-11-01T00:00:00Z",
+            "end": "2026-11-01T00:00:45Z",
+            "device_seconds": 45,
+            "share_percent": "40",
+            "allocated_seconds": "18.0",
+            "free_seconds": "10.0",
+            "billable_seconds": "8.0"
+          }
+        ],
+        "basis": [
+          "half-open [start,end); overlapping logs deduplicated by state priority",
+          "lease shares retained as exact Decimal fractions",
+          "free quota ordered by occurrence second, meter, source id",
+          "line total rounded once with ROUND_HALF_UP to whole cents"
+        ]
+      }
+    ],
+    "closed_months": [
+      {
+        "close_id": "oct",
+        "month": "2026-10",
+        "seq": 14,
+        "status": "closed",
+        "allowed_holds": [
+          {
+            "ref": "m7",
+            "meter": "m7",
+            "start": "2026-10-31T23:58:55Z",
+            "end": "2026-10-31T23:59:15Z"
+          }
+        ],
+        "usage_lines": [
+          {
+            "line_id": "LINE-2026-10-A-20261001T000000Z-20261101T000000Z",
+            "kind": "usage",
+            "contract": "A",
+            "for_month": "2026-10",
+            "book_month": "2026-10",
+            "rate": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2026-11-01T00:00:00Z",
+              "cents_per_sec": "1.25"
+            },
+            "exact_allocated_seconds": "83.0",
+            "free_seconds": "50.0",
+            "billable_seconds": "33.0",
+            "exact_amount_cents": "41.250",
+            "invoice_amount_cents": 41,
+            "coverage": [
+              {
+                "atom_id": "atom:resp:b9:0-70:1793491130-1793491135:a7:1793491130-1793491135",
+                "fact_id": "fact:m7:b9:0-70",
+                "meter": "m7",
+                "source_id": "l1",
+                "source_ids": [
+                  "l1",
+                  "l2"
+                ],
+                "source_coverage": [
+                  {
+                    "source_id": "l1",
+                    "start": "2026-10-31T23:58:50Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  {
+                    "source_id": "l2",
+                    "start": "2026-10-31T23:59:20Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  }
+                ],
+                "lease_id": "a7",
+                "start": "2026-10-31T23:58:50Z",
+                "end": "2026-10-31T23:58:55Z",
+                "device_seconds": 5,
+                "share_percent": "100",
+                "allocated_seconds": "5",
+                "free_seconds": "5",
+                "billable_seconds": "0"
+              },
+              {
+                "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491145-1793491200",
+                "fact_id": "fact:m2:b3:0-100",
+                "meter": "m2",
+                "source_id": "l4",
+                "source_ids": [
+                  "l4"
+                ],
+                "source_coverage": [
+                  {
+                    "source_id": "l4",
+                    "start": "2026-10-31T23:59:05Z",
+                    "end": "2026-11-01T00:00:45Z"
+                  }
+                ],
+                "lease_id": "a2",
+                "start": "2026-10-31T23:59:05Z",
+                "end": "2026-11-01T00:00:00Z",
+                "device_seconds": 55,
+                "share_percent": "60",
+                "allocated_seconds": "33.0",
+                "free_seconds": "21.0",
+                "billable_seconds": "12.0"
+              },
+              {
+                "atom_id": "atom:resp:b9:0-70:1793491155-1793491200:a7:1793491155-1793491200",
+                "fact_id": "fact:m7:b9:0-70",
+                "meter": "m7",
+                "source_id": "l1",
+                "source_ids": [
+                  "l1",
+                  "l2"
+                ],
+                "source_coverage": [
+                  {
+                    "source_id": "l1",
+                    "start": "2026-10-31T23:58:50Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  {
+                    "source_id": "l2",
+                    "start": "2026-10-31T23:59:20Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  }
+                ],
+                "lease_id": "a7",
+                "start": "2026-10-31T23:59:15Z",
+                "end": "2026-11-01T00:00:00Z",
+                "device_seconds": 45,
+                "share_percent": "100",
+                "allocated_seconds": "45",
+                "free_seconds": "24",
+                "billable_seconds": "21"
+              }
+            ],
+            "basis": [
+              "half-open [start,end); overlapping logs deduplicated by state priority",
+              "lease shares retained as exact Decimal fractions",
+              "free quota ordered by occurrence second, meter, source id",
+              "line total rounded once with ROUND_HALF_UP to whole cents"
+            ]
+          },
+          {
+            "line_id": "LINE-2026-10-B-20261001T000000Z-20270101T000000Z",
+            "kind": "usage",
+            "contract": "B",
+            "for_month": "2026-10",
+            "book_month": "2026-10",
+            "rate": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2027-01-01T00:00:00Z",
+              "cents_per_sec": "0.75"
+            },
+            "exact_allocated_seconds": "22.0",
+            "free_seconds": "10.0",
+            "billable_seconds": "12.0",
+            "exact_amount_cents": "9.000",
+            "invoice_amount_cents": 9,
+            "coverage": [
+              {
+                "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491145-1793491200",
+                "fact_id": "fact:m2:b3:0-100",
+                "meter": "m2",
+                "source_id": "l4",
+                "source_ids": [
+                  "l4"
+                ],
+                "source_coverage": [
+                  {
+                    "source_id": "l4",
+                    "start": "2026-10-31T23:59:05Z",
+                    "end": "2026-11-01T00:00:45Z"
+                  }
+                ],
+                "lease_id": "b2",
+                "start": "2026-10-31T23:59:05Z",
+                "end": "2026-11-01T00:00:00Z",
+                "device_seconds": 55,
+                "share_percent": "40",
+                "allocated_seconds": "22.0",
+                "free_seconds": "10.0",
+                "billable_seconds": "12.0"
+              }
+            ],
+            "basis": [
+              "half-open [start,end); overlapping logs deduplicated by state priority",
+              "lease shares retained as exact Decimal fractions",
+              "free quota ordered by occurrence second, meter, source id",
+              "line total rounded once with ROUND_HALF_UP to whole cents"
+            ]
+          }
+        ],
+        "journal_entry_ids": [],
+        "journal_entries": [],
+        "receivable_exact_by_contract": {
+          "A": "41.250",
+          "B": "9.000"
+        },
+        "receivable_by_contract_cents": {
+          "A": 41,
+          "B": 9
+        },
+        "prior_month_adjustment_net_by_contract_cents": {},
+        "close_period_invoice_total_by_contract_cents": {
+          "A": 41,
+          "B": 9
+        },
+        "issue_ids_in_month": [
+          "ISS-8f79c4cf814d"
+        ],
+        "open_unclaimed": [],
+        "carried_unresolved_old_month_issues": [],
+        "original_basis": "Rates/free quota and effective facts as of this close; never replaced by a rerun."
+      },
+      {
+        "close_id": "nov",
+        "month": "2026-11",
+        "seq": 18,
+        "status": "closed",
+        "allowed_holds": [
+          {
+            "ref": "m7",
+            "meter": "m7",
+            "start": "2026-11-01T00:00:00Z",
+            "end": "2026-11-01T00:00:13Z"
+          }
+        ],
+        "usage_lines": [
+          {
+            "line_id": "LINE-2026-11-A-20261101T000000Z-20270101T000000Z",
+            "kind": "usage",
+            "contract": "A",
+            "for_month": "2026-11",
+            "book_month": "2026-11",
+            "rate": {
+              "start": "2026-11-01T00:00:00Z",
+              "end": "2027-01-01T00:00:00Z",
+              "cents_per_sec": "1.50"
+            },
+            "exact_allocated_seconds": "149.0",
+            "free_seconds": "30.0",
+            "billable_seconds": "119.0",
+            "exact_amount_cents": "178.500",
+            "invoice_amount_cents": 179,
+            "coverage": [
+              {
+                "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491200-1793491245",
+                "fact_id": "fact:m2:b3:0-100",
+                "meter": "m2",
+                "source_id": "l4",
+                "source_ids": [
+                  "l4"
+                ],
+                "source_coverage": [
+                  {
+                    "source_id": "l4",
+                    "start": "2026-10-31T23:59:05Z",
+                    "end": "2026-11-01T00:00:45Z"
+                  }
+                ],
+                "lease_id": "a2",
+                "start": "2026-11-01T00:00:00Z",
+                "end": "2026-11-01T00:00:45Z",
+                "device_seconds": 45,
+                "share_percent": "60",
+                "allocated_seconds": "27.0",
+                "free_seconds": "16.2",
+                "billable_seconds": "10.8"
+              },
+              {
+                "atom_id": "atom:resp:b9:0-70:1793491213-1793491235:a7:1793491213-1793491235",
+                "fact_id": "fact:m7:b9:0-70",
+                "meter": "m7",
+                "source_id": "l1",
+                "source_ids": [
+                  "l1",
+                  "l2"
+                ],
+                "source_coverage": [
+                  {
+                    "source_id": "l1",
+                    "start": "2026-10-31T23:59:25Z",
+                    "end": "2026-11-01T00:00:35Z"
+                  },
+                  {
+                    "source_id": "l2",
+                    "start": "2026-10-31T23:59:55Z",
+                    "end": "2026-11-01T00:00:35Z"
+                  }
+                ],
+                "lease_id": "a7",
+                "start": "2026-11-01T00:00:13Z",
+                "end": "2026-11-01T00:00:35Z",
+                "device_seconds": 22,
+                "share_percent": "100",
+                "allocated_seconds": "22",
+                "free_seconds": "13.8",
+                "billable_seconds": "8.2"
+              },
+              {
+                "atom_id": "atom:resp:b9:80-180:1793491245-1793491345:a7:1793491245-1793491345",
+                "fact_id": "fact:m7:b9:80-180",
+                "meter": "m7",
+                "source_id": "l1",
+                "source_ids": [
+                  "l1",
+                  "l2"
+                ],
+                "source_coverage": [
+                  {
+                    "source_id": "l1",
+                    "start": "2026-11-01T00:00:45Z",
+                    "end": "2026-11-01T00:02:25Z"
+                  },
+                  {
+                    "source_id": "l2",
+                    "start": "2026-11-01T00:00:45Z",
+                    "end": "2026-11-01T00:01:15Z"
+                  }
+                ],
+                "lease_id": "a7",
+                "start": "2026-11-01T00:00:45Z",
+                "end": "2026-11-01T00:02:25Z",
+                "device_seconds": 100,
+                "share_percent": "100",
+                "allocated_seconds": "100",
+                "free_seconds": "0",
+                "billable_seconds": "100"
+              }
+            ],
+            "basis": [
+              "half-open [start,end); overlapping logs deduplicated by state priority",
+              "lease shares retained as exact Decimal fractions",
+              "free quota ordered by occurrence second, meter, source id",
+              "line total rounded once with ROUND_HALF_UP to whole cents"
+            ]
+          },
+          {
+            "line_id": "LINE-2026-11-B-20261001T000000Z-20270101T000000Z",
+            "kind": "usage",
+            "contract": "B",
+            "for_month": "2026-11",
+            "book_month": "2026-11",
+            "rate": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2027-01-01T00:00:00Z",
+              "cents_per_sec": "0.75"
+            },
+            "exact_allocated_seconds": "18.0",
+            "free_seconds": "10.0",
+            "billable_seconds": "8.0",
+            "exact_amount_cents": "6.000",
+            "invoice_amount_cents": 6,
+            "coverage": [
+              {
+                "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491200-1793491245",
+                "fact_id": "fact:m2:b3:0-100",
+                "meter": "m2",
+                "source_id": "l4",
+                "source_ids": [
+                  "l4"
+                ],
+                "source_coverage": [
+                  {
+                    "source_id": "l4",
+                    "start": "2026-10-31T23:59:05Z",
+                    "end": "2026-11-01T00:00:45Z"
+                  }
+                ],
+                "lease_id": "b2",
+                "start": "2026-11-01T00:00:00Z",
+                "end": "2026-11-01T00:00:45Z",
+                "device_seconds": 45,
+                "share_percent": "40",
+                "allocated_seconds": "18.0",
+                "free_seconds": "10.0",
+                "billable_seconds": "8.0"
+              }
+            ],
+            "basis": [
+              "half-open [start,end); overlapping logs deduplicated by state priority",
+              "lease shares retained as exact Decimal fractions",
+              "free quota ordered by occurrence second, meter, source id",
+              "line total rounded once with ROUND_HALF_UP to whole cents"
+            ]
+          }
+        ],
+        "journal_entry_ids": [
+          "J-ADJ-2026-10-A-nov",
+          "J-ADJ-2026-10-B-nov"
+        ],
+        "journal_entries": [
+          {
+            "entry_id": "J-ADJ-2026-10-A-nov",
+            "kind": "closed_month_reconciliation",
+            "status": "pending_posting",
+            "for_month": "2026-10",
+            "book_month": "2026-11",
+            "contract": "A",
+            "amount_cents": 25,
+            "amount_exact_cents": "25.000",
+            "rounding": "ROUND_HALF_UP to whole cents on each journal/invoice line",
+            "created_seq": 18,
+            "close_id": "nov",
+            "reason": "Compare the corrected complete receivable for the original month with amounts actually posted; post this signed supplement/reversal in the next open book month.",
+            "basis": {
+              "original_close_id": "oct",
+              "original_receivable_cents": 41,
+              "original_exact_receivable_cents": "41.250",
+              "corrected_receivable_cents": 15,
+              "corrected_exact_receivable_cents": "15.000",
+              "posted_cents_at_calculation": -10,
+              "net_amount_cents": 25,
+              "net_exact_before_line_rounding_cents": "25.000",
+              "memo_booking_gap_original_minus_posted_cents": 51,
+              "memo_fact_correction_corrected_minus_original_cents": -26,
+              "memo_components": [
+                {
+                  "component": "original_account_vs_posted",
+                  "amount_cents": 51,
+                  "meaning": "Would make posted ledger equal the original close account."
+                },
+                {
+                  "component": "closed_month_fact_correction",
+                  "amount_cents": -26,
+                  "meaning": "Old-rate correction from original account to current old-month recomputation."
+                }
+              ],
+              "old_rates_only": true,
+              "posted_receipts": [
+                {
+                  "receipt_id": "erp-631",
+                  "seq": 17,
+                  "book_month": "2026-11",
+                  "amount_cents": -10,
+                  "origin": "external-invoice-6"
+                }
+              ],
+              "original_line_ids": [
+                "LINE-2026-10-A-20261001T000000Z-20261101T000000Z"
+              ],
+              "corrected_line_ids": [
+                "LINE-2026-10-A-20261001T000000Z-20261101T000000Z"
+              ],
+              "corrected_lines_at_calculation": [
+                {
+                  "line_id": "LINE-2026-10-A-20261001T000000Z-20261101T000000Z",
+                  "kind": "usage",
+                  "contract": "A",
+                  "for_month": "2026-10",
+                  "book_month": "2026-10",
+                  "rate": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z",
+                    "cents_per_sec": "1.25"
+                  },
+                  "exact_allocated_seconds": "62.0",
+                  "free_seconds": "50.0",
+                  "billable_seconds": "12.0",
+                  "exact_amount_cents": "15.000",
+                  "invoice_amount_cents": 15,
+                  "coverage": [
+                    {
+                      "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491145-1793491200",
+                      "fact_id": "fact:m2:b3:0-100",
+                      "meter": "m2",
+                      "source_id": "l4",
+                      "source_ids": [
+                        "l4"
+                      ],
+                      "source_coverage": [
+                        {
+                          "source_id": "l4",
+                          "start": "2026-10-31T23:59:05Z",
+                          "end": "2026-11-01T00:00:45Z"
+                        }
+                      ],
+                      "lease_id": "a2",
+                      "start": "2026-10-31T23:59:05Z",
+                      "end": "2026-11-01T00:00:00Z",
+                      "device_seconds": 55,
+                      "share_percent": "60",
+                      "allocated_seconds": "33.0",
+                      "free_seconds": "26.4",
+                      "billable_seconds": "6.6"
+                    },
+                    {
+                      "atom_id": "atom:resp:b9:0-70:1793491165-1793491194:a7:1793491165-1793491194",
+                      "fact_id": "fact:m7:b9:0-70",
+                      "meter": "m7",
+                      "source_id": "l1",
+                      "source_ids": [
+                        "l1",
+                        "l2"
+                      ],
+                      "source_coverage": [
+                        {
+                          "source_id": "l1",
+                          "start": "2026-10-31T23:59:25Z",
+                          "end": "2026-11-01T00:00:35Z"
+                        },
+                        {
+                          "source_id": "l2",
+                          "start": "2026-10-31T23:59:55Z",
+                          "end": "2026-11-01T00:00:35Z"
+                        }
+                      ],
+                      "lease_id": "a7",
+                      "start": "2026-10-31T23:59:25Z",
+                      "end": "2026-10-31T23:59:54Z",
+                      "device_seconds": 29,
+                      "share_percent": "100",
+                      "allocated_seconds": "29",
+                      "free_seconds": "23.6",
+                      "billable_seconds": "5.4"
+                    }
+                  ],
+                  "basis": [
+                    "half-open [start,end); overlapping logs deduplicated by state priority",
+                    "lease shares retained as exact Decimal fractions",
+                    "free quota ordered by occurrence second, meter, source id",
+                    "line total rounded once with ROUND_HALF_UP to whole cents"
+                  ]
+                }
+              ]
+            },
+            "settling_receipt_ids": [],
+            "booked_after_creation_cents": 0,
+            "unposted_amount_cents": 25
+          },
+          {
+            "entry_id": "J-ADJ-2026-10-B-nov",
+            "kind": "closed_month_reconciliation",
+            "status": "pending_posting",
+            "for_month": "2026-10",
+            "book_month": "2026-11",
+            "contract": "B",
+            "amount_cents": 9,
+            "amount_exact_cents": "9.000",
+            "rounding": "ROUND_HALF_UP to whole cents on each journal/invoice line",
+            "created_seq": 18,
+            "close_id": "nov",
+            "reason": "Compare the corrected complete receivable for the original month with amounts actually posted; post this signed supplement/reversal in the next open book month.",
+            "basis": {
+              "original_close_id": "oct",
+              "original_receivable_cents": 9,
+              "original_exact_receivable_cents": "9.000",
+              "corrected_receivable_cents": 9,
+              "corrected_exact_receivable_cents": "9.000",
+              "posted_cents_at_calculation": 0,
+              "net_amount_cents": 9,
+              "net_exact_before_line_rounding_cents": "9.000",
+              "memo_booking_gap_original_minus_posted_cents": 9,
+              "memo_fact_correction_corrected_minus_original_cents": 0,
+              "memo_components": [
+                {
+                  "component": "original_account_vs_posted",
+                  "amount_cents": 9,
+                  "meaning": "Would make posted ledger equal the original close account."
+                },
+                {
+                  "component": "closed_month_fact_correction",
+                  "amount_cents": 0,
+                  "meaning": "Old-rate correction from original account to current old-month recomputation."
+                }
+              ],
+              "old_rates_only": true,
+              "posted_receipts": [],
+              "original_line_ids": [
+                "LINE-2026-10-B-20261001T000000Z-20270101T000000Z"
+              ],
+              "corrected_line_ids": [
+                "LINE-2026-10-B-20261001T000000Z-20270101T000000Z"
+              ],
+              "corrected_lines_at_calculation": [
+                {
+                  "line_id": "LINE-2026-10-B-20261001T000000Z-20270101T000000Z",
+                  "kind": "usage",
+                  "contract": "B",
+                  "for_month": "2026-10",
+                  "book_month": "2026-10",
+                  "rate": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2027-01-01T00:00:00Z",
+                    "cents_per_sec": "0.75"
+                  },
+                  "exact_allocated_seconds": "22.0",
+                  "free_seconds": "10.0",
+                  "billable_seconds": "12.0",
+                  "exact_amount_cents": "9.000",
+                  "invoice_amount_cents": 9,
+                  "coverage": [
+                    {
+                      "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491145-1793491200",
+                      "fact_id": "fact:m2:b3:0-100",
+                      "meter": "m2",
+                      "source_id": "l4",
+                      "source_ids": [
+                        "l4"
+                      ],
+                      "source_coverage": [
+                        {
+                          "source_id": "l4",
+                          "start": "2026-10-31T23:59:05Z",
+                          "end": "2026-11-01T00:00:45Z"
+                        }
+                      ],
+                      "lease_id": "b2",
+                      "start": "2026-10-31T23:59:05Z",
+                      "end": "2026-11-01T00:00:00Z",
+                      "device_seconds": 55,
+                      "share_percent": "40",
+                      "allocated_seconds": "22.0",
+                      "free_seconds": "10.0",
+                      "billable_seconds": "12.0"
+                    }
+                  ],
+                  "basis": [
+                    "half-open [start,end); overlapping logs deduplicated by state priority",
+                    "lease shares retained as exact Decimal fractions",
+                    "free quota ordered by occurrence second, meter, source id",
+                    "line total rounded once with ROUND_HALF_UP to whole cents"
+                  ]
+                }
+              ]
+            },
+            "settling_receipt_ids": [],
+            "booked_after_creation_cents": 0,
+            "unposted_amount_cents": 9
+          }
+        ],
+        "receivable_exact_by_contract": {
+          "A": "178.500",
+          "B": "6.000"
+        },
+        "receivable_by_contract_cents": {
+          "A": 179,
+          "B": 6
+        },
+        "prior_month_adjustment_net_by_contract_cents": {
+          "A": 25,
+          "B": 9
+        },
+        "close_period_invoice_total_by_contract_cents": {
+          "A": 204,
+          "B": 15
+        },
+        "issue_ids_in_month": [
+          "ISS-e5ac55f75b84"
+        ],
+        "open_unclaimed": [],
+        "carried_unresolved_old_month_issues": [
+          {
+            "issue_id": "ISS-e5ac55f75b84",
+            "kind": "lease_conflict",
+            "blocking": true,
+            "meter": "m7",
+            "start": "2026-10-31T23:59:54Z",
+            "end": "2026-11-01T00:00:13Z",
+            "source_ids": [
+              "l1",
+              "l2"
+            ],
+            "lease_ids": [
+              "a7",
+              "b7"
+            ],
+            "contracts": [
+              "A",
+              "B"
+            ],
+            "fact_id": "fact:m7:b9:0-70",
+            "message": "valid dedicated/group leases collide; usage is preserved but not chosen",
+            "unclaimed_seconds": "0",
+            "source_closed_month": "2026-10",
+            "source_close_id": "oct",
+            "month_part_start": "2026-10-31T23:59:54Z",
+            "month_part_end": "2026-11-01T00:00:00Z"
+          }
+        ],
+        "original_basis": "Rates/free quota and effective facts as of this close; never replaced by a rerun."
+      }
+    ],
+    "closed_month_positions": [
+      {
+        "for_month": "2026-10",
+        "contract": "A",
+        "close_id": "oct",
+        "original_receivable_cents": 41,
+        "current_old_rate_corrected_receivable_cents": 15,
+        "posted_cents": -10,
+        "original_minus_posted_cents": 51,
+        "corrected_minus_posted_cents": 25,
+        "fact_delta_cents": -26,
+        "journal_entry_amount_cents": 25,
+        "unposted_journal_amount_cents": 25,
+        "journal_entry_ids": [
+          "J-ADJ-2026-10-A-nov"
+        ],
+        "posted_receipt_ids": [
+          "erp-631"
+        ]
+      },
+      {
+        "for_month": "2026-10",
+        "contract": "B",
+        "close_id": "oct",
+        "original_receivable_cents": 9,
+        "current_old_rate_corrected_receivable_cents": 9,
+        "posted_cents": 0,
+        "original_minus_posted_cents": 9,
+        "corrected_minus_posted_cents": 9,
+        "fact_delta_cents": 0,
+        "journal_entry_amount_cents": 9,
+        "unposted_journal_amount_cents": 9,
+        "journal_entry_ids": [
+          "J-ADJ-2026-10-B-nov"
+        ],
+        "posted_receipt_ids": []
+      },
+      {
+        "for_month": "2026-11",
+        "contract": "A",
+        "close_id": "nov",
+        "original_receivable_cents": 179,
+        "current_old_rate_corrected_receivable_cents": 179,
+        "posted_cents": 0,
+        "original_minus_posted_cents": 179,
+        "corrected_minus_posted_cents": 179,
+        "fact_delta_cents": 0,
+        "journal_entry_amount_cents": 0,
+        "unposted_journal_amount_cents": 0,
+        "journal_entry_ids": [],
+        "posted_receipt_ids": []
+      },
+      {
+        "for_month": "2026-11",
+        "contract": "B",
+        "close_id": "nov",
+        "original_receivable_cents": 6,
+        "current_old_rate_corrected_receivable_cents": 6,
+        "posted_cents": 0,
+        "original_minus_posted_cents": 6,
+        "corrected_minus_posted_cents": 6,
+        "fact_delta_cents": 0,
+        "journal_entry_amount_cents": 0,
+        "unposted_journal_amount_cents": 0,
+        "journal_entry_ids": [],
+        "posted_receipt_ids": []
+      }
+    ],
+    "journal_entries": [
+      {
+        "entry_id": "J-ADJ-2026-10-A-nov",
+        "kind": "closed_month_reconciliation",
+        "status": "pending_posting",
+        "for_month": "2026-10",
+        "book_month": "2026-11",
+        "contract": "A",
+        "amount_cents": 25,
+        "amount_exact_cents": "25.000",
+        "rounding": "ROUND_HALF_UP to whole cents on each journal/invoice line",
+        "created_seq": 18,
+        "close_id": "nov",
+        "reason": "Compare the corrected complete receivable for the original month with amounts actually posted; post this signed supplement/reversal in the next open book month.",
+        "basis": {
+          "original_close_id": "oct",
+          "original_receivable_cents": 41,
+          "original_exact_receivable_cents": "41.250",
+          "corrected_receivable_cents": 15,
+          "corrected_exact_receivable_cents": "15.000",
+          "posted_cents_at_calculation": -10,
+          "net_amount_cents": 25,
+          "net_exact_before_line_rounding_cents": "25.000",
+          "memo_booking_gap_original_minus_posted_cents": 51,
+          "memo_fact_correction_corrected_minus_original_cents": -26,
+          "memo_components": [
+            {
+              "component": "original_account_vs_posted",
+              "amount_cents": 51,
+              "meaning": "Would make posted ledger equal the original close account."
+            },
+            {
+              "component": "closed_month_fact_correction",
+              "amount_cents": -26,
+              "meaning": "Old-rate correction from original account to current old-month recomputation."
+            }
+          ],
+          "old_rates_only": true,
+          "posted_receipts": [
+            {
+              "receipt_id": "erp-631",
+              "seq": 17,
+              "book_month": "2026-11",
+              "amount_cents": -10,
+              "origin": "external-invoice-6"
+            }
+          ],
+          "original_line_ids": [
+            "LINE-2026-10-A-20261001T000000Z-20261101T000000Z"
+          ],
+          "corrected_line_ids": [
+            "LINE-2026-10-A-20261001T000000Z-20261101T000000Z"
+          ],
+          "corrected_lines_at_calculation": [
+            {
+              "line_id": "LINE-2026-10-A-20261001T000000Z-20261101T000000Z",
+              "kind": "usage",
+              "contract": "A",
+              "for_month": "2026-10",
+              "book_month": "2026-10",
+              "rate": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z",
+                "cents_per_sec": "1.25"
+              },
+              "exact_allocated_seconds": "62.0",
+              "free_seconds": "50.0",
+              "billable_seconds": "12.0",
+              "exact_amount_cents": "15.000",
+              "invoice_amount_cents": 15,
+              "coverage": [
+                {
+                  "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491145-1793491200",
+                  "fact_id": "fact:m2:b3:0-100",
+                  "meter": "m2",
+                  "source_id": "l4",
+                  "source_ids": [
+                    "l4"
+                  ],
+                  "source_coverage": [
+                    {
+                      "source_id": "l4",
+                      "start": "2026-10-31T23:59:05Z",
+                      "end": "2026-11-01T00:00:45Z"
+                    }
+                  ],
+                  "lease_id": "a2",
+                  "start": "2026-10-31T23:59:05Z",
+                  "end": "2026-11-01T00:00:00Z",
+                  "device_seconds": 55,
+                  "share_percent": "60",
+                  "allocated_seconds": "33.0",
+                  "free_seconds": "26.4",
+                  "billable_seconds": "6.6"
+                },
+                {
+                  "atom_id": "atom:resp:b9:0-70:1793491165-1793491194:a7:1793491165-1793491194",
+                  "fact_id": "fact:m7:b9:0-70",
+                  "meter": "m7",
+                  "source_id": "l1",
+                  "source_ids": [
+                    "l1",
+                    "l2"
+                  ],
+                  "source_coverage": [
+                    {
+                      "source_id": "l1",
+                      "start": "2026-10-31T23:59:25Z",
+                      "end": "2026-11-01T00:00:35Z"
+                    },
+                    {
+                      "source_id": "l2",
+                      "start": "2026-10-31T23:59:55Z",
+                      "end": "2026-11-01T00:00:35Z"
+                    }
+                  ],
+                  "lease_id": "a7",
+                  "start": "2026-10-31T23:59:25Z",
+                  "end": "2026-10-31T23:59:54Z",
+                  "device_seconds": 29,
+                  "share_percent": "100",
+                  "allocated_seconds": "29",
+                  "free_seconds": "23.6",
+                  "billable_seconds": "5.4"
+                }
+              ],
+              "basis": [
+                "half-open [start,end); overlapping logs deduplicated by state priority",
+                "lease shares retained as exact Decimal fractions",
+                "free quota ordered by occurrence second, meter, source id",
+                "line total rounded once with ROUND_HALF_UP to whole cents"
+              ]
+            }
+          ]
+        },
+        "settling_receipt_ids": [],
+        "booked_after_creation_cents": 0,
+        "unposted_amount_cents": 25
+      },
+      {
+        "entry_id": "J-ADJ-2026-10-B-nov",
+        "kind": "closed_month_reconciliation",
+        "status": "pending_posting",
+        "for_month": "2026-10",
+        "book_month": "2026-11",
+        "contract": "B",
+        "amount_cents": 9,
+        "amount_exact_cents": "9.000",
+        "rounding": "ROUND_HALF_UP to whole cents on each journal/invoice line",
+        "created_seq": 18,
+        "close_id": "nov",
+        "reason": "Compare the corrected complete receivable for the original month with amounts actually posted; post this signed supplement/reversal in the next open book month.",
+        "basis": {
+          "original_close_id": "oct",
+          "original_receivable_cents": 9,
+          "original_exact_receivable_cents": "9.000",
+          "corrected_receivable_cents": 9,
+          "corrected_exact_receivable_cents": "9.000",
+          "posted_cents_at_calculation": 0,
+          "net_amount_cents": 9,
+          "net_exact_before_line_rounding_cents": "9.000",
+          "memo_booking_gap_original_minus_posted_cents": 9,
+          "memo_fact_correction_corrected_minus_original_cents": 0,
+          "memo_components": [
+            {
+              "component": "original_account_vs_posted",
+              "amount_cents": 9,
+              "meaning": "Would make posted ledger equal the original close account."
+            },
+            {
+              "component": "closed_month_fact_correction",
+              "amount_cents": 0,
+              "meaning": "Old-rate correction from original account to current old-month recomputation."
+            }
+          ],
+          "old_rates_only": true,
+          "posted_receipts": [],
+          "original_line_ids": [
+            "LINE-2026-10-B-20261001T000000Z-20270101T000000Z"
+          ],
+          "corrected_line_ids": [
+            "LINE-2026-10-B-20261001T000000Z-20270101T000000Z"
+          ],
+          "corrected_lines_at_calculation": [
+            {
+              "line_id": "LINE-2026-10-B-20261001T000000Z-20270101T000000Z",
+              "kind": "usage",
+              "contract": "B",
+              "for_month": "2026-10",
+              "book_month": "2026-10",
+              "rate": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2027-01-01T00:00:00Z",
+                "cents_per_sec": "0.75"
+              },
+              "exact_allocated_seconds": "22.0",
+              "free_seconds": "10.0",
+              "billable_seconds": "12.0",
+              "exact_amount_cents": "9.000",
+              "invoice_amount_cents": 9,
+              "coverage": [
+                {
+                  "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491145-1793491200",
+                  "fact_id": "fact:m2:b3:0-100",
+                  "meter": "m2",
+                  "source_id": "l4",
+                  "source_ids": [
+                    "l4"
+                  ],
+                  "source_coverage": [
+                    {
+                      "source_id": "l4",
+                      "start": "2026-10-31T23:59:05Z",
+                      "end": "2026-11-01T00:00:45Z"
+                    }
+                  ],
+                  "lease_id": "b2",
+                  "start": "2026-10-31T23:59:05Z",
+                  "end": "2026-11-01T00:00:00Z",
+                  "device_seconds": 55,
+                  "share_percent": "40",
+                  "allocated_seconds": "22.0",
+                  "free_seconds": "10.0",
+                  "billable_seconds": "12.0"
+                }
+              ],
+              "basis": [
+                "half-open [start,end); overlapping logs deduplicated by state priority",
+                "lease shares retained as exact Decimal fractions",
+                "free quota ordered by occurrence second, meter, source id",
+                "line total rounded once with ROUND_HALF_UP to whole cents"
+              ]
+            }
+          ]
+        },
+        "settling_receipt_ids": [],
+        "booked_after_creation_cents": 0,
+        "unposted_amount_cents": 9
+      }
+    ],
+    "posted_receipts": [
+      {
+        "receipt_id": "erp-631",
+        "seq": 17,
+        "book_month": "2026-11",
+        "amount_cents": -10,
+        "origin": "external-invoice-6"
+      }
+    ],
+    "reconciliation_state": {
+      "2026-10|A": {
+        "old_month": "2026-10",
+        "contract": "A",
+        "last_corrected_receivable_cents": 15,
+        "last_corrected_exact_cents": "15.000",
+        "initial_original_receivable_cents": 41,
+        "initial_posted_cents": -10,
+        "initial_entry_amount_cents": 25,
+        "close_id": "nov"
+      },
+      "2026-10|B": {
+        "old_month": "2026-10",
+        "contract": "B",
+        "last_corrected_receivable_cents": 9,
+        "last_corrected_exact_cents": "9.000",
+        "initial_original_receivable_cents": 9,
+        "initial_posted_cents": 0,
+        "initial_entry_amount_cents": 9,
+        "close_id": "nov"
+      }
+    }
+  },
+  "current": {
+    "timeline": [
+      {
+        "fact_id": "fact:m2:b3:0-100",
+        "meter": "m2",
+        "boot": "b3",
+        "tick_start": 0,
+        "tick_end": 100,
+        "start_ts": 1793491145,
+        "end_ts": 1793491245,
+        "start": "2026-10-31T23:59:05Z",
+        "end": "2026-11-01T00:00:45Z",
+        "seconds": 100,
+        "state": "use",
+        "effective_use": true,
+        "source_id": "l4",
+        "source_ids": [
+          "l4"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l4",
+            "start": "2026-10-31T23:59:05Z",
+            "end": "2026-11-01T00:00:45Z"
+          }
+        ],
+        "clock_rev": 1
+      },
+      {
+        "fact_id": "fact:m7:b9:0-70",
+        "meter": "m7",
+        "boot": "b9",
+        "tick_start": 0,
+        "tick_end": 70,
+        "start_ts": 1793491165,
+        "end_ts": 1793491235,
+        "start": "2026-10-31T23:59:25Z",
+        "end": "2026-11-01T00:00:35Z",
+        "seconds": 70,
+        "state": "use",
+        "effective_use": true,
+        "source_id": "l1",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-10-31T23:59:25Z",
+            "end": "2026-11-01T00:00:35Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-10-31T23:59:55Z",
+            "end": "2026-11-01T00:00:35Z"
+          }
+        ],
+        "clock_rev": 2
+      },
+      {
+        "fact_id": "fact:m7:b9:70-80",
+        "meter": "m7",
+        "boot": "b9",
+        "tick_start": 70,
+        "tick_end": 80,
+        "start_ts": 1793491235,
+        "end_ts": 1793491245,
+        "start": "2026-11-01T00:00:35Z",
+        "end": "2026-11-01T00:00:45Z",
+        "seconds": 10,
+        "state": "cal",
+        "effective_use": false,
+        "source_id": "l3",
+        "source_ids": [
+          "l1",
+          "l2",
+          "l3"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-11-01T00:00:35Z",
+            "end": "2026-11-01T00:00:45Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-11-01T00:00:35Z",
+            "end": "2026-11-01T00:00:45Z"
+          },
+          {
+            "source_id": "l3",
+            "start": "2026-11-01T00:00:35Z",
+            "end": "2026-11-01T00:00:45Z"
+          }
+        ],
+        "clock_rev": 2
+      },
+      {
+        "fact_id": "fact:m7:b9:80-180",
+        "meter": "m7",
+        "boot": "b9",
+        "tick_start": 80,
+        "tick_end": 180,
+        "start_ts": 1793491245,
+        "end_ts": 1793491345,
+        "start": "2026-11-01T00:00:45Z",
+        "end": "2026-11-01T00:02:25Z",
+        "seconds": 100,
+        "state": "use",
+        "effective_use": true,
+        "source_id": "l1",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-11-01T00:00:45Z",
+            "end": "2026-11-01T00:02:25Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-11-01T00:00:45Z",
+            "end": "2026-11-01T00:01:15Z"
+          }
+        ],
+        "clock_rev": 2
+      }
+    ],
+    "responsibility": [
+      {
+        "responsibility_id": "resp:b3:0-100:1793491145-1793491245",
+        "fact_id": "fact:m2:b3:0-100",
+        "meter": "m2",
+        "boot": "b3",
+        "start_ts": 1793491145,
+        "end_ts": 1793491245,
+        "start": "2026-10-31T23:59:05Z",
+        "end": "2026-11-01T00:00:45Z",
+        "seconds": 100,
+        "tick_start": 0,
+        "tick_end": 100,
+        "state": "use",
+        "effective_use": true,
+        "source_id": "l4",
+        "source_ids": [
+          "l4"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l4",
+            "start": "2026-10-31T23:59:05Z",
+            "end": "2026-11-01T00:00:45Z"
+          }
+        ],
+        "status": "allocated",
+        "allocations": [
+          {
+            "contract": "A",
+            "lease_id": "a2",
+            "group": "split-2",
+            "share_percent": "60",
+            "fraction": "0.6",
+            "allocated_seconds": "60.0"
+          },
+          {
+            "contract": "B",
+            "lease_id": "b2",
+            "group": "split-2",
+            "share_percent": "40",
+            "fraction": "0.4",
+            "allocated_seconds": "40.0"
+          }
+        ],
+        "lease_ids": [
+          "a2",
+          "b2"
+        ],
+        "contracts": [
+          "A",
+          "B"
+        ],
+        "share_sum_percent": "100",
+        "unclaimed_fraction": "0",
+        "unclaimed_seconds": "0"
+      },
+      {
+        "responsibility_id": "resp:b9:0-70:1793491165-1793491194",
+        "fact_id": "fact:m7:b9:0-70",
+        "meter": "m7",
+        "boot": "b9",
+        "start_ts": 1793491165,
+        "end_ts": 1793491194,
+        "start": "2026-10-31T23:59:25Z",
+        "end": "2026-10-31T23:59:54Z",
+        "seconds": 29,
+        "tick_start": 0,
+        "tick_end": 29,
+        "state": "use",
+        "effective_use": true,
+        "source_id": "l1",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-10-31T23:59:25Z",
+            "end": "2026-11-01T00:00:35Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-10-31T23:59:55Z",
+            "end": "2026-11-01T00:00:35Z"
+          }
+        ],
+        "status": "allocated",
+        "allocations": [
+          {
+            "contract": "A",
+            "lease_id": "a7",
+            "group": null,
+            "share_percent": "100",
+            "fraction": "1",
+            "allocated_seconds": "29"
+          }
+        ],
+        "lease_ids": [
+          "a7"
+        ],
+        "contracts": [
+          "A"
+        ],
+        "share_sum_percent": "100",
+        "unclaimed_fraction": "0",
+        "unclaimed_seconds": "0"
+      },
+      {
+        "responsibility_id": "resp:b9:0-70:1793491194-1793491213",
+        "fact_id": "fact:m7:b9:0-70",
+        "meter": "m7",
+        "boot": "b9",
+        "start_ts": 1793491194,
+        "end_ts": 1793491213,
+        "start": "2026-10-31T23:59:54Z",
+        "end": "2026-11-01T00:00:13Z",
+        "seconds": 19,
+        "tick_start": 29,
+        "tick_end": 48,
+        "state": "use",
+        "effective_use": true,
+        "source_id": "l1",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-10-31T23:59:25Z",
+            "end": "2026-11-01T00:00:35Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-10-31T23:59:55Z",
+            "end": "2026-11-01T00:00:35Z"
+          }
+        ],
+        "status": "lease_conflict",
+        "allocations": [],
+        "unclaimed_fraction": "0",
+        "unclaimed_seconds": "0",
+        "lease_ids": [
+          "a7",
+          "b7"
+        ],
+        "contracts": [
+          "A",
+          "B"
+        ],
+        "groups": [],
+        "dedicated": [
+          "a7",
+          "b7"
+        ]
+      },
+      {
+        "responsibility_id": "resp:b9:0-70:1793491213-1793491235",
+        "fact_id": "fact:m7:b9:0-70",
+        "meter": "m7",
+        "boot": "b9",
+        "start_ts": 1793491213,
+        "end_ts": 1793491235,
+        "start": "2026-11-01T00:00:13Z",
+        "end": "2026-11-01T00:00:35Z",
+        "seconds": 22,
+        "tick_start": 48,
+        "tick_end": 70,
+        "state": "use",
+        "effective_use": true,
+        "source_id": "l1",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-10-31T23:59:25Z",
+            "end": "2026-11-01T00:00:35Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-10-31T23:59:55Z",
+            "end": "2026-11-01T00:00:35Z"
+          }
+        ],
+        "status": "allocated",
+        "allocations": [
+          {
+            "contract": "A",
+            "lease_id": "a7",
+            "group": null,
+            "share_percent": "100",
+            "fraction": "1",
+            "allocated_seconds": "22"
+          }
+        ],
+        "lease_ids": [
+          "a7"
+        ],
+        "contracts": [
+          "A"
+        ],
+        "share_sum_percent": "100",
+        "unclaimed_fraction": "0",
+        "unclaimed_seconds": "0"
+      },
+      {
+        "responsibility_id": "resp:b9:70-80:1793491235-1793491245",
+        "fact_id": "fact:m7:b9:70-80",
+        "meter": "m7",
+        "boot": "b9",
+        "start_ts": 1793491235,
+        "end_ts": 1793491245,
+        "start": "2026-11-01T00:00:35Z",
+        "end": "2026-11-01T00:00:45Z",
+        "seconds": 10,
+        "tick_start": 70,
+        "tick_end": 80,
+        "state": "cal",
+        "effective_use": false,
+        "source_id": "l3",
+        "source_ids": [
+          "l1",
+          "l2",
+          "l3"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-11-01T00:00:35Z",
+            "end": "2026-11-01T00:00:45Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-11-01T00:00:35Z",
+            "end": "2026-11-01T00:00:45Z"
+          },
+          {
+            "source_id": "l3",
+            "start": "2026-11-01T00:00:35Z",
+            "end": "2026-11-01T00:00:45Z"
+          }
+        ],
+        "status": "allocated",
+        "allocations": [
+          {
+            "contract": "A",
+            "lease_id": "a7",
+            "group": null,
+            "share_percent": "100",
+            "fraction": "1",
+            "allocated_seconds": "10"
+          }
+        ],
+        "lease_ids": [
+          "a7"
+        ],
+        "contracts": [
+          "A"
+        ],
+        "share_sum_percent": "100",
+        "unclaimed_fraction": "0",
+        "unclaimed_seconds": "0"
+      },
+      {
+        "responsibility_id": "resp:b9:80-180:1793491245-1793491345",
+        "fact_id": "fact:m7:b9:80-180",
+        "meter": "m7",
+        "boot": "b9",
+        "start_ts": 1793491245,
+        "end_ts": 1793491345,
+        "start": "2026-11-01T00:00:45Z",
+        "end": "2026-11-01T00:02:25Z",
+        "seconds": 100,
+        "tick_start": 80,
+        "tick_end": 180,
+        "state": "use",
+        "effective_use": true,
+        "source_id": "l1",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-11-01T00:00:45Z",
+            "end": "2026-11-01T00:02:25Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-11-01T00:00:45Z",
+            "end": "2026-11-01T00:01:15Z"
+          }
+        ],
+        "status": "allocated",
+        "allocations": [
+          {
+            "contract": "A",
+            "lease_id": "a7",
+            "group": null,
+            "share_percent": "100",
+            "fraction": "1",
+            "allocated_seconds": "100"
+          }
+        ],
+        "lease_ids": [
+          "a7"
+        ],
+        "contracts": [
+          "A"
+        ],
+        "share_sum_percent": "100",
+        "unclaimed_fraction": "0",
+        "unclaimed_seconds": "0"
+      }
+    ],
+    "atoms": [
+      {
+        "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491145-1793491200",
+        "fact_id": "fact:m2:b3:0-100",
+        "responsibility_id": "resp:b3:0-100:1793491145-1793491245",
+        "meter": "m2",
+        "boot": "b3",
+        "source_id": "l4",
+        "source_ids": [
+          "l4"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l4",
+            "start": "2026-10-31T23:59:05Z",
+            "end": "2026-11-01T00:00:45Z"
+          }
+        ],
+        "lease_id": "a2",
+        "group": "split-2",
+        "contract": "A",
+        "month": "2026-10",
+        "book_month": "2026-10",
+        "start_ts": 1793491145,
+        "end_ts": 1793491200,
+        "start": "2026-10-31T23:59:05Z",
+        "end": "2026-11-01T00:00:00Z",
+        "device_seconds": 55,
+        "fraction": "0.6",
+        "allocated_seconds": "33.0",
+        "share_percent": "60",
+        "rate_start": "2026-10-01T00:00:00Z",
+        "rate_end": "2026-11-01T00:00:00Z",
+        "rate_cents_per_sec": "1.25",
+        "free_quota_seconds": "50",
+        "free_used_seconds": "26.4",
+        "billable_seconds": "6.6"
+      },
+      {
+        "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491200-1793491245",
+        "fact_id": "fact:m2:b3:0-100",
+        "responsibility_id": "resp:b3:0-100:1793491145-1793491245",
+        "meter": "m2",
+        "boot": "b3",
+        "source_id": "l4",
+        "source_ids": [
+          "l4"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l4",
+            "start": "2026-10-31T23:59:05Z",
+            "end": "2026-11-01T00:00:45Z"
+          }
+        ],
+        "lease_id": "a2",
+        "group": "split-2",
+        "contract": "A",
+        "month": "2026-11",
+        "book_month": "2026-11",
+        "start_ts": 1793491200,
+        "end_ts": 1793491245,
+        "start": "2026-11-01T00:00:00Z",
+        "end": "2026-11-01T00:00:45Z",
+        "device_seconds": 45,
+        "fraction": "0.6",
+        "allocated_seconds": "27.0",
+        "share_percent": "60",
+        "rate_start": "2026-11-01T00:00:00Z",
+        "rate_end": "2027-01-01T00:00:00Z",
+        "rate_cents_per_sec": "1.50",
+        "free_quota_seconds": "30",
+        "free_used_seconds": "16.2",
+        "billable_seconds": "10.8"
+      },
+      {
+        "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491145-1793491200",
+        "fact_id": "fact:m2:b3:0-100",
+        "responsibility_id": "resp:b3:0-100:1793491145-1793491245",
+        "meter": "m2",
+        "boot": "b3",
+        "source_id": "l4",
+        "source_ids": [
+          "l4"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l4",
+            "start": "2026-10-31T23:59:05Z",
+            "end": "2026-11-01T00:00:45Z"
+          }
+        ],
+        "lease_id": "b2",
+        "group": "split-2",
+        "contract": "B",
+        "month": "2026-10",
+        "book_month": "2026-10",
+        "start_ts": 1793491145,
+        "end_ts": 1793491200,
+        "start": "2026-10-31T23:59:05Z",
+        "end": "2026-11-01T00:00:00Z",
+        "device_seconds": 55,
+        "fraction": "0.4",
+        "allocated_seconds": "22.0",
+        "share_percent": "40",
+        "rate_start": "2026-10-01T00:00:00Z",
+        "rate_end": "2027-01-01T00:00:00Z",
+        "rate_cents_per_sec": "0.75",
+        "free_quota_seconds": "10",
+        "free_used_seconds": "10.0",
+        "billable_seconds": "12.0"
+      },
+      {
+        "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491200-1793491245",
+        "fact_id": "fact:m2:b3:0-100",
+        "responsibility_id": "resp:b3:0-100:1793491145-1793491245",
+        "meter": "m2",
+        "boot": "b3",
+        "source_id": "l4",
+        "source_ids": [
+          "l4"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l4",
+            "start": "2026-10-31T23:59:05Z",
+            "end": "2026-11-01T00:00:45Z"
+          }
+        ],
+        "lease_id": "b2",
+        "group": "split-2",
+        "contract": "B",
+        "month": "2026-11",
+        "book_month": "2026-11",
+        "start_ts": 1793491200,
+        "end_ts": 1793491245,
+        "start": "2026-11-01T00:00:00Z",
+        "end": "2026-11-01T00:00:45Z",
+        "device_seconds": 45,
+        "fraction": "0.4",
+        "allocated_seconds": "18.0",
+        "share_percent": "40",
+        "rate_start": "2026-10-01T00:00:00Z",
+        "rate_end": "2027-01-01T00:00:00Z",
+        "rate_cents_per_sec": "0.75",
+        "free_quota_seconds": "10",
+        "free_used_seconds": "10.0",
+        "billable_seconds": "8.0"
+      },
+      {
+        "atom_id": "atom:resp:b9:0-70:1793491165-1793491194:a7:1793491165-1793491194",
+        "fact_id": "fact:m7:b9:0-70",
+        "responsibility_id": "resp:b9:0-70:1793491165-1793491194",
+        "meter": "m7",
+        "boot": "b9",
+        "source_id": "l1",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-10-31T23:59:25Z",
+            "end": "2026-11-01T00:00:35Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-10-31T23:59:55Z",
+            "end": "2026-11-01T00:00:35Z"
+          }
+        ],
+        "lease_id": "a7",
+        "group": null,
+        "contract": "A",
+        "month": "2026-10",
+        "book_month": "2026-10",
+        "start_ts": 1793491165,
+        "end_ts": 1793491194,
+        "start": "2026-10-31T23:59:25Z",
+        "end": "2026-10-31T23:59:54Z",
+        "device_seconds": 29,
+        "fraction": "1",
+        "allocated_seconds": "29",
+        "share_percent": "100",
+        "rate_start": "2026-10-01T00:00:00Z",
+        "rate_end": "2026-11-01T00:00:00Z",
+        "rate_cents_per_sec": "1.25",
+        "free_quota_seconds": "50",
+        "free_used_seconds": "23.6",
+        "billable_seconds": "5.4"
+      },
+      {
+        "atom_id": "atom:resp:b9:0-70:1793491213-1793491235:a7:1793491213-1793491235",
+        "fact_id": "fact:m7:b9:0-70",
+        "responsibility_id": "resp:b9:0-70:1793491213-1793491235",
+        "meter": "m7",
+        "boot": "b9",
+        "source_id": "l1",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-10-31T23:59:25Z",
+            "end": "2026-11-01T00:00:35Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-10-31T23:59:55Z",
+            "end": "2026-11-01T00:00:35Z"
+          }
+        ],
+        "lease_id": "a7",
+        "group": null,
+        "contract": "A",
+        "month": "2026-11",
+        "book_month": "2026-11",
+        "start_ts": 1793491213,
+        "end_ts": 1793491235,
+        "start": "2026-11-01T00:00:13Z",
+        "end": "2026-11-01T00:00:35Z",
+        "device_seconds": 22,
+        "fraction": "1",
+        "allocated_seconds": "22",
+        "share_percent": "100",
+        "rate_start": "2026-11-01T00:00:00Z",
+        "rate_end": "2027-01-01T00:00:00Z",
+        "rate_cents_per_sec": "1.50",
+        "free_quota_seconds": "30",
+        "free_used_seconds": "13.8",
+        "billable_seconds": "8.2"
+      },
+      {
+        "atom_id": "atom:resp:b9:80-180:1793491245-1793491345:a7:1793491245-1793491345",
+        "fact_id": "fact:m7:b9:80-180",
+        "responsibility_id": "resp:b9:80-180:1793491245-1793491345",
+        "meter": "m7",
+        "boot": "b9",
+        "source_id": "l1",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "source_coverage": [
+          {
+            "source_id": "l1",
+            "start": "2026-11-01T00:00:45Z",
+            "end": "2026-11-01T00:02:25Z"
+          },
+          {
+            "source_id": "l2",
+            "start": "2026-11-01T00:00:45Z",
+            "end": "2026-11-01T00:01:15Z"
+          }
+        ],
+        "lease_id": "a7",
+        "group": null,
+        "contract": "A",
+        "month": "2026-11",
+        "book_month": "2026-11",
+        "start_ts": 1793491245,
+        "end_ts": 1793491345,
+        "start": "2026-11-01T00:00:45Z",
+        "end": "2026-11-01T00:02:25Z",
+        "device_seconds": 100,
+        "fraction": "1",
+        "allocated_seconds": "100",
+        "share_percent": "100",
+        "rate_start": "2026-11-01T00:00:00Z",
+        "rate_end": "2027-01-01T00:00:00Z",
+        "rate_cents_per_sec": "1.50",
+        "free_quota_seconds": "30",
+        "free_used_seconds": "0",
+        "billable_seconds": "100"
+      }
+    ],
+    "lines": [
+      {
+        "line_id": "LINE-2026-10-A-20261001T000000Z-20261101T000000Z",
+        "kind": "usage",
+        "contract": "A",
+        "for_month": "2026-10",
+        "book_month": "2026-10",
+        "rate": {
+          "start": "2026-10-01T00:00:00Z",
+          "end": "2026-11-01T00:00:00Z",
+          "cents_per_sec": "1.25"
+        },
+        "exact_allocated_seconds": "62.0",
+        "free_seconds": "50.0",
+        "billable_seconds": "12.0",
+        "exact_amount_cents": "15.000",
+        "invoice_amount_cents": 15,
+        "coverage": [
+          {
+            "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491145-1793491200",
+            "fact_id": "fact:m2:b3:0-100",
+            "meter": "m2",
+            "source_id": "l4",
+            "source_ids": [
+              "l4"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l4",
+                "start": "2026-10-31T23:59:05Z",
+                "end": "2026-11-01T00:00:45Z"
+              }
+            ],
+            "lease_id": "a2",
+            "start": "2026-10-31T23:59:05Z",
+            "end": "2026-11-01T00:00:00Z",
+            "device_seconds": 55,
+            "share_percent": "60",
+            "allocated_seconds": "33.0",
+            "free_seconds": "26.4",
+            "billable_seconds": "6.6"
+          },
+          {
+            "atom_id": "atom:resp:b9:0-70:1793491165-1793491194:a7:1793491165-1793491194",
+            "fact_id": "fact:m7:b9:0-70",
+            "meter": "m7",
+            "source_id": "l1",
+            "source_ids": [
+              "l1",
+              "l2"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l1",
+                "start": "2026-10-31T23:59:25Z",
+                "end": "2026-11-01T00:00:35Z"
+              },
+              {
+                "source_id": "l2",
+                "start": "2026-10-31T23:59:55Z",
+                "end": "2026-11-01T00:00:35Z"
+              }
+            ],
+            "lease_id": "a7",
+            "start": "2026-10-31T23:59:25Z",
+            "end": "2026-10-31T23:59:54Z",
+            "device_seconds": 29,
+            "share_percent": "100",
+            "allocated_seconds": "29",
+            "free_seconds": "23.6",
+            "billable_seconds": "5.4"
+          }
+        ],
+        "basis": [
+          "half-open [start,end); overlapping logs deduplicated by state priority",
+          "lease shares retained as exact Decimal fractions",
+          "free quota ordered by occurrence second, meter, source id",
+          "line total rounded once with ROUND_HALF_UP to whole cents"
+        ]
+      },
+      {
+        "line_id": "LINE-2026-10-B-20261001T000000Z-20270101T000000Z",
+        "kind": "usage",
+        "contract": "B",
+        "for_month": "2026-10",
+        "book_month": "2026-10",
+        "rate": {
+          "start": "2026-10-01T00:00:00Z",
+          "end": "2027-01-01T00:00:00Z",
+          "cents_per_sec": "0.75"
+        },
+        "exact_allocated_seconds": "22.0",
+        "free_seconds": "10.0",
+        "billable_seconds": "12.0",
+        "exact_amount_cents": "9.000",
+        "invoice_amount_cents": 9,
+        "coverage": [
+          {
+            "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491145-1793491200",
+            "fact_id": "fact:m2:b3:0-100",
+            "meter": "m2",
+            "source_id": "l4",
+            "source_ids": [
+              "l4"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l4",
+                "start": "2026-10-31T23:59:05Z",
+                "end": "2026-11-01T00:00:45Z"
+              }
+            ],
+            "lease_id": "b2",
+            "start": "2026-10-31T23:59:05Z",
+            "end": "2026-11-01T00:00:00Z",
+            "device_seconds": 55,
+            "share_percent": "40",
+            "allocated_seconds": "22.0",
+            "free_seconds": "10.0",
+            "billable_seconds": "12.0"
+          }
+        ],
+        "basis": [
+          "half-open [start,end); overlapping logs deduplicated by state priority",
+          "lease shares retained as exact Decimal fractions",
+          "free quota ordered by occurrence second, meter, source id",
+          "line total rounded once with ROUND_HALF_UP to whole cents"
+        ]
+      },
+      {
+        "line_id": "LINE-2026-11-A-20261101T000000Z-20270101T000000Z",
+        "kind": "usage",
+        "contract": "A",
+        "for_month": "2026-11",
+        "book_month": "2026-11",
+        "rate": {
+          "start": "2026-11-01T00:00:00Z",
+          "end": "2027-01-01T00:00:00Z",
+          "cents_per_sec": "1.50"
+        },
+        "exact_allocated_seconds": "149.0",
+        "free_seconds": "30.0",
+        "billable_seconds": "119.0",
+        "exact_amount_cents": "178.500",
+        "invoice_amount_cents": 179,
+        "coverage": [
+          {
+            "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491200-1793491245",
+            "fact_id": "fact:m2:b3:0-100",
+            "meter": "m2",
+            "source_id": "l4",
+            "source_ids": [
+              "l4"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l4",
+                "start": "2026-10-31T23:59:05Z",
+                "end": "2026-11-01T00:00:45Z"
+              }
+            ],
+            "lease_id": "a2",
+            "start": "2026-11-01T00:00:00Z",
+            "end": "2026-11-01T00:00:45Z",
+            "device_seconds": 45,
+            "share_percent": "60",
+            "allocated_seconds": "27.0",
+            "free_seconds": "16.2",
+            "billable_seconds": "10.8"
+          },
+          {
+            "atom_id": "atom:resp:b9:0-70:1793491213-1793491235:a7:1793491213-1793491235",
+            "fact_id": "fact:m7:b9:0-70",
+            "meter": "m7",
+            "source_id": "l1",
+            "source_ids": [
+              "l1",
+              "l2"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l1",
+                "start": "2026-10-31T23:59:25Z",
+                "end": "2026-11-01T00:00:35Z"
+              },
+              {
+                "source_id": "l2",
+                "start": "2026-10-31T23:59:55Z",
+                "end": "2026-11-01T00:00:35Z"
+              }
+            ],
+            "lease_id": "a7",
+            "start": "2026-11-01T00:00:13Z",
+            "end": "2026-11-01T00:00:35Z",
+            "device_seconds": 22,
+            "share_percent": "100",
+            "allocated_seconds": "22",
+            "free_seconds": "13.8",
+            "billable_seconds": "8.2"
+          },
+          {
+            "atom_id": "atom:resp:b9:80-180:1793491245-1793491345:a7:1793491245-1793491345",
+            "fact_id": "fact:m7:b9:80-180",
+            "meter": "m7",
+            "source_id": "l1",
+            "source_ids": [
+              "l1",
+              "l2"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l1",
+                "start": "2026-11-01T00:00:45Z",
+                "end": "2026-11-01T00:02:25Z"
+              },
+              {
+                "source_id": "l2",
+                "start": "2026-11-01T00:00:45Z",
+                "end": "2026-11-01T00:01:15Z"
+              }
+            ],
+            "lease_id": "a7",
+            "start": "2026-11-01T00:00:45Z",
+            "end": "2026-11-01T00:02:25Z",
+            "device_seconds": 100,
+            "share_percent": "100",
+            "allocated_seconds": "100",
+            "free_seconds": "0",
+            "billable_seconds": "100"
+          }
+        ],
+        "basis": [
+          "half-open [start,end); overlapping logs deduplicated by state priority",
+          "lease shares retained as exact Decimal fractions",
+          "free quota ordered by occurrence second, meter, source id",
+          "line total rounded once with ROUND_HALF_UP to whole cents"
+        ]
+      },
+      {
+        "line_id": "LINE-2026-11-B-20261001T000000Z-20270101T000000Z",
+        "kind": "usage",
+        "contract": "B",
+        "for_month": "2026-11",
+        "book_month": "2026-11",
+        "rate": {
+          "start": "2026-10-01T00:00:00Z",
+          "end": "2027-01-01T00:00:00Z",
+          "cents_per_sec": "0.75"
+        },
+        "exact_allocated_seconds": "18.0",
+        "free_seconds": "10.0",
+        "billable_seconds": "8.0",
+        "exact_amount_cents": "6.000",
+        "invoice_amount_cents": 6,
+        "coverage": [
+          {
+            "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491200-1793491245",
+            "fact_id": "fact:m2:b3:0-100",
+            "meter": "m2",
+            "source_id": "l4",
+            "source_ids": [
+              "l4"
+            ],
+            "source_coverage": [
+              {
+                "source_id": "l4",
+                "start": "2026-10-31T23:59:05Z",
+                "end": "2026-11-01T00:00:45Z"
+              }
+            ],
+            "lease_id": "b2",
+            "start": "2026-11-01T00:00:00Z",
+            "end": "2026-11-01T00:00:45Z",
+            "device_seconds": 45,
+            "share_percent": "40",
+            "allocated_seconds": "18.0",
+            "free_seconds": "10.0",
+            "billable_seconds": "8.0"
+          }
+        ],
+        "basis": [
+          "half-open [start,end); overlapping logs deduplicated by state priority",
+          "lease shares retained as exact Decimal fractions",
+          "free quota ordered by occurrence second, meter, source id",
+          "line total rounded once with ROUND_HALF_UP to whole cents"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "issue_id": "ISS-e5ac55f75b84",
+        "kind": "lease_conflict",
+        "blocking": true,
+        "meter": "m7",
+        "start_ts": 1793491194,
+        "end_ts": 1793491213,
+        "start": "2026-10-31T23:59:54Z",
+        "end": "2026-11-01T00:00:13Z",
+        "fact_id": "fact:m7:b9:0-70",
+        "responsibility_id": "resp:b9:0-70:1793491194-1793491213",
+        "source_ids": [
+          "l1",
+          "l2"
+        ],
+        "lease_ids": [
+          "a7",
+          "b7"
+        ],
+        "contracts": [
+          "A",
+          "B"
+        ],
+        "unclaimed_seconds": "0",
+        "message": "valid dedicated/group leases collide; usage is preserved but not chosen"
+      }
+    ]
+  },
+  "closed_months": {
+    "2026-10": {
+      "close_id": "oct",
+      "month": "2026-10",
+      "seq": 14,
+      "status": "closed",
+      "allowed_holds": [
+        {
+          "ref": "m7",
+          "meter": "m7",
+          "start": "2026-10-31T23:58:55Z",
+          "end": "2026-10-31T23:59:15Z"
+        }
+      ],
+      "usage_lines": [
+        {
+          "line_id": "LINE-2026-10-A-20261001T000000Z-20261101T000000Z",
+          "kind": "usage",
+          "contract": "A",
+          "for_month": "2026-10",
+          "book_month": "2026-10",
+          "rate": {
+            "start": "2026-10-01T00:00:00Z",
+            "end": "2026-11-01T00:00:00Z",
+            "cents_per_sec": "1.25"
+          },
+          "exact_allocated_seconds": "83.0",
+          "free_seconds": "50.0",
+          "billable_seconds": "33.0",
+          "exact_amount_cents": "41.250",
+          "invoice_amount_cents": 41,
+          "coverage": [
+            {
+              "atom_id": "atom:resp:b9:0-70:1793491130-1793491135:a7:1793491130-1793491135",
+              "fact_id": "fact:m7:b9:0-70",
+              "meter": "m7",
+              "source_id": "l1",
+              "source_ids": [
+                "l1",
+                "l2"
+              ],
+              "source_coverage": [
+                {
+                  "source_id": "l1",
+                  "start": "2026-10-31T23:58:50Z",
+                  "end": "2026-11-01T00:00:00Z"
+                },
+                {
+                  "source_id": "l2",
+                  "start": "2026-10-31T23:59:20Z",
+                  "end": "2026-11-01T00:00:00Z"
+                }
+              ],
+              "lease_id": "a7",
+              "start": "2026-10-31T23:58:50Z",
+              "end": "2026-10-31T23:58:55Z",
+              "device_seconds": 5,
+              "share_percent": "100",
+              "allocated_seconds": "5",
+              "free_seconds": "5",
+              "billable_seconds": "0"
+            },
+            {
+              "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491145-1793491200",
+              "fact_id": "fact:m2:b3:0-100",
+              "meter": "m2",
+              "source_id": "l4",
+              "source_ids": [
+                "l4"
+              ],
+              "source_coverage": [
+                {
+                  "source_id": "l4",
+                  "start": "2026-10-31T23:59:05Z",
+                  "end": "2026-11-01T00:00:45Z"
+                }
+              ],
+              "lease_id": "a2",
+              "start": "2026-10-31T23:59:05Z",
+              "end": "2026-11-01T00:00:00Z",
+              "device_seconds": 55,
+              "share_percent": "60",
+              "allocated_seconds": "33.0",
+              "free_seconds": "21.0",
+              "billable_seconds": "12.0"
+            },
+            {
+              "atom_id": "atom:resp:b9:0-70:1793491155-1793491200:a7:1793491155-1793491200",
+              "fact_id": "fact:m7:b9:0-70",
+              "meter": "m7",
+              "source_id": "l1",
+              "source_ids": [
+                "l1",
+                "l2"
+              ],
+              "source_coverage": [
+                {
+                  "source_id": "l1",
+                  "start": "2026-10-31T23:58:50Z",
+                  "end": "2026-11-01T00:00:00Z"
+                },
+                {
+                  "source_id": "l2",
+                  "start": "2026-10-31T23:59:20Z",
+                  "end": "2026-11-01T00:00:00Z"
+                }
+              ],
+              "lease_id": "a7",
+              "start": "2026-10-31T23:59:15Z",
+              "end": "2026-11-01T00:00:00Z",
+              "device_seconds": 45,
+              "share_percent": "100",
+              "allocated_seconds": "45",
+              "free_seconds": "24",
+              "billable_seconds": "21"
+            }
+          ],
+          "basis": [
+            "half-open [start,end); overlapping logs deduplicated by state priority",
+            "lease shares retained as exact Decimal fractions",
+            "free quota ordered by occurrence second, meter, source id",
+            "line total rounded once with ROUND_HALF_UP to whole cents"
+          ]
+        },
+        {
+          "line_id": "LINE-2026-10-B-20261001T000000Z-20270101T000000Z",
+          "kind": "usage",
+          "contract": "B",
+          "for_month": "2026-10",
+          "book_month": "2026-10",
+          "rate": {
+            "start": "2026-10-01T00:00:00Z",
+            "end": "2027-01-01T00:00:00Z",
+            "cents_per_sec": "0.75"
+          },
+          "exact_allocated_seconds": "22.0",
+          "free_seconds": "10.0",
+          "billable_seconds": "12.0",
+          "exact_amount_cents": "9.000",
+          "invoice_amount_cents": 9,
+          "coverage": [
+            {
+              "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491145-1793491200",
+              "fact_id": "fact:m2:b3:0-100",
+              "meter": "m2",
+              "source_id": "l4",
+              "source_ids": [
+                "l4"
+              ],
+              "source_coverage": [
+                {
+                  "source_id": "l4",
+                  "start": "2026-10-31T23:59:05Z",
+                  "end": "2026-11-01T00:00:45Z"
+                }
+              ],
+              "lease_id": "b2",
+              "start": "2026-10-31T23:59:05Z",
+              "end": "2026-11-01T00:00:00Z",
+              "device_seconds": 55,
+              "share_percent": "40",
+              "allocated_seconds": "22.0",
+              "free_seconds": "10.0",
+              "billable_seconds": "12.0"
+            }
+          ],
+          "basis": [
+            "half-open [start,end); overlapping logs deduplicated by state priority",
+            "lease shares retained as exact Decimal fractions",
+            "free quota ordered by occurrence second, meter, source id",
+            "line total rounded once with ROUND_HALF_UP to whole cents"
+          ]
+        }
+      ],
+      "journal_entry_ids": [],
+      "journal_entries": [],
+      "receivable_exact_by_contract": {
+        "A": "41.250",
+        "B": "9.000"
+      },
+      "receivable_by_contract_cents": {
+        "A": 41,
+        "B": 9
+      },
+      "prior_month_adjustment_net_by_contract_cents": {},
+      "close_period_invoice_total_by_contract_cents": {
+        "A": 41,
+        "B": 9
+      },
+      "issue_ids_in_month": [
+        "ISS-8f79c4cf814d"
+      ],
+      "open_unclaimed": [],
+      "carried_unresolved_old_month_issues": [],
+      "original_basis": "Rates/free quota and effective facts as of this close; never replaced by a rerun."
+    },
+    "2026-11": {
+      "close_id": "nov",
+      "month": "2026-11",
+      "seq": 18,
+      "status": "closed",
+      "allowed_holds": [
+        {
+          "ref": "m7",
+          "meter": "m7",
+          "start": "2026-11-01T00:00:00Z",
+          "end": "2026-11-01T00:00:13Z"
+        }
+      ],
+      "usage_lines": [
+        {
+          "line_id": "LINE-2026-11-A-20261101T000000Z-20270101T000000Z",
+          "kind": "usage",
+          "contract": "A",
+          "for_month": "2026-11",
+          "book_month": "2026-11",
+          "rate": {
+            "start": "2026-11-01T00:00:00Z",
+            "end": "2027-01-01T00:00:00Z",
+            "cents_per_sec": "1.50"
+          },
+          "exact_allocated_seconds": "149.0",
+          "free_seconds": "30.0",
+          "billable_seconds": "119.0",
+          "exact_amount_cents": "178.500",
+          "invoice_amount_cents": 179,
+          "coverage": [
+            {
+              "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491200-1793491245",
+              "fact_id": "fact:m2:b3:0-100",
+              "meter": "m2",
+              "source_id": "l4",
+              "source_ids": [
+                "l4"
+              ],
+              "source_coverage": [
+                {
+                  "source_id": "l4",
+                  "start": "2026-10-31T23:59:05Z",
+                  "end": "2026-11-01T00:00:45Z"
+                }
+              ],
+              "lease_id": "a2",
+              "start": "2026-11-01T00:00:00Z",
+              "end": "2026-11-01T00:00:45Z",
+              "device_seconds": 45,
+              "share_percent": "60",
+              "allocated_seconds": "27.0",
+              "free_seconds": "16.2",
+              "billable_seconds": "10.8"
+            },
+            {
+              "atom_id": "atom:resp:b9:0-70:1793491213-1793491235:a7:1793491213-1793491235",
+              "fact_id": "fact:m7:b9:0-70",
+              "meter": "m7",
+              "source_id": "l1",
+              "source_ids": [
+                "l1",
+                "l2"
+              ],
+              "source_coverage": [
+                {
+                  "source_id": "l1",
+                  "start": "2026-10-31T23:59:25Z",
+                  "end": "2026-11-01T00:00:35Z"
+                },
+                {
+                  "source_id": "l2",
+                  "start": "2026-10-31T23:59:55Z",
+                  "end": "2026-11-01T00:00:35Z"
+                }
+              ],
+              "lease_id": "a7",
+              "start": "2026-11-01T00:00:13Z",
+              "end": "2026-11-01T00:00:35Z",
+              "device_seconds": 22,
+              "share_percent": "100",
+              "allocated_seconds": "22",
+              "free_seconds": "13.8",
+              "billable_seconds": "8.2"
+            },
+            {
+              "atom_id": "atom:resp:b9:80-180:1793491245-1793491345:a7:1793491245-1793491345",
+              "fact_id": "fact:m7:b9:80-180",
+              "meter": "m7",
+              "source_id": "l1",
+              "source_ids": [
+                "l1",
+                "l2"
+              ],
+              "source_coverage": [
+                {
+                  "source_id": "l1",
+                  "start": "2026-11-01T00:00:45Z",
+                  "end": "2026-11-01T00:02:25Z"
+                },
+                {
+                  "source_id": "l2",
+                  "start": "2026-11-01T00:00:45Z",
+                  "end": "2026-11-01T00:01:15Z"
+                }
+              ],
+              "lease_id": "a7",
+              "start": "2026-11-01T00:00:45Z",
+              "end": "2026-11-01T00:02:25Z",
+              "device_seconds": 100,
+              "share_percent": "100",
+              "allocated_seconds": "100",
+              "free_seconds": "0",
+              "billable_seconds": "100"
+            }
+          ],
+          "basis": [
+            "half-open [start,end); overlapping logs deduplicated by state priority",
+            "lease shares retained as exact Decimal fractions",
+            "free quota ordered by occurrence second, meter, source id",
+            "line total rounded once with ROUND_HALF_UP to whole cents"
+          ]
+        },
+        {
+          "line_id": "LINE-2026-11-B-20261001T000000Z-20270101T000000Z",
+          "kind": "usage",
+          "contract": "B",
+          "for_month": "2026-11",
+          "book_month": "2026-11",
+          "rate": {
+            "start": "2026-10-01T00:00:00Z",
+            "end": "2027-01-01T00:00:00Z",
+            "cents_per_sec": "0.75"
+          },
+          "exact_allocated_seconds": "18.0",
+          "free_seconds": "10.0",
+          "billable_seconds": "8.0",
+          "exact_amount_cents": "6.000",
+          "invoice_amount_cents": 6,
+          "coverage": [
+            {
+              "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491200-1793491245",
+              "fact_id": "fact:m2:b3:0-100",
+              "meter": "m2",
+              "source_id": "l4",
+              "source_ids": [
+                "l4"
+              ],
+              "source_coverage": [
+                {
+                  "source_id": "l4",
+                  "start": "2026-10-31T23:59:05Z",
+                  "end": "2026-11-01T00:00:45Z"
+                }
+              ],
+              "lease_id": "b2",
+              "start": "2026-11-01T00:00:00Z",
+              "end": "2026-11-01T00:00:45Z",
+              "device_seconds": 45,
+              "share_percent": "40",
+              "allocated_seconds": "18.0",
+              "free_seconds": "10.0",
+              "billable_seconds": "8.0"
+            }
+          ],
+          "basis": [
+            "half-open [start,end); overlapping logs deduplicated by state priority",
+            "lease shares retained as exact Decimal fractions",
+            "free quota ordered by occurrence second, meter, source id",
+            "line total rounded once with ROUND_HALF_UP to whole cents"
+          ]
+        }
+      ],
+      "journal_entry_ids": [
+        "J-ADJ-2026-10-A-nov",
+        "J-ADJ-2026-10-B-nov"
+      ],
+      "journal_entries": [
+        {
+          "entry_id": "J-ADJ-2026-10-A-nov",
+          "kind": "closed_month_reconciliation",
+          "status": "pending_posting",
+          "for_month": "2026-10",
+          "book_month": "2026-11",
+          "contract": "A",
+          "amount_cents": 25,
+          "amount_exact_cents": "25.000",
+          "rounding": "ROUND_HALF_UP to whole cents on each journal/invoice line",
+          "created_seq": 18,
+          "close_id": "nov",
+          "reason": "Compare the corrected complete receivable for the original month with amounts actually posted; post this signed supplement/reversal in the next open book month.",
+          "basis": {
+            "original_close_id": "oct",
+            "original_receivable_cents": 41,
+            "original_exact_receivable_cents": "41.250",
+            "corrected_receivable_cents": 15,
+            "corrected_exact_receivable_cents": "15.000",
+            "posted_cents_at_calculation": -10,
+            "net_amount_cents": 25,
+            "net_exact_before_line_rounding_cents": "25.000",
+            "memo_booking_gap_original_minus_posted_cents": 51,
+            "memo_fact_correction_corrected_minus_original_cents": -26,
+            "memo_components": [
+              {
+                "component": "original_account_vs_posted",
+                "amount_cents": 51,
+                "meaning": "Would make posted ledger equal the original close account."
+              },
+              {
+                "component": "closed_month_fact_correction",
+                "amount_cents": -26,
+                "meaning": "Old-rate correction from original account to current old-month recomputation."
+              }
+            ],
+            "old_rates_only": true,
+            "posted_receipts": [
+              {
+                "receipt_id": "erp-631",
+                "seq": 17,
+                "book_month": "2026-11",
+                "amount_cents": -10,
+                "origin": "external-invoice-6"
+              }
+            ],
+            "original_line_ids": [
+              "LINE-2026-10-A-20261001T000000Z-20261101T000000Z"
+            ],
+            "corrected_line_ids": [
+              "LINE-2026-10-A-20261001T000000Z-20261101T000000Z"
+            ],
+            "corrected_lines_at_calculation": [
+              {
+                "line_id": "LINE-2026-10-A-20261001T000000Z-20261101T000000Z",
+                "kind": "usage",
+                "contract": "A",
+                "for_month": "2026-10",
+                "book_month": "2026-10",
+                "rate": {
+                  "start": "2026-10-01T00:00:00Z",
+                  "end": "2026-11-01T00:00:00Z",
+                  "cents_per_sec": "1.25"
+                },
+                "exact_allocated_seconds": "62.0",
+                "free_seconds": "50.0",
+                "billable_seconds": "12.0",
+                "exact_amount_cents": "15.000",
+                "invoice_amount_cents": 15,
+                "coverage": [
+                  {
+                    "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491145-1793491200",
+                    "fact_id": "fact:m2:b3:0-100",
+                    "meter": "m2",
+                    "source_id": "l4",
+                    "source_ids": [
+                      "l4"
+                    ],
+                    "source_coverage": [
+                      {
+                        "source_id": "l4",
+                        "start": "2026-10-31T23:59:05Z",
+                        "end": "2026-11-01T00:00:45Z"
+                      }
+                    ],
+                    "lease_id": "a2",
+                    "start": "2026-10-31T23:59:05Z",
+                    "end": "2026-11-01T00:00:00Z",
+                    "device_seconds": 55,
+                    "share_percent": "60",
+                    "allocated_seconds": "33.0",
+                    "free_seconds": "26.4",
+                    "billable_seconds": "6.6"
+                  },
+                  {
+                    "atom_id": "atom:resp:b9:0-70:1793491165-1793491194:a7:1793491165-1793491194",
+                    "fact_id": "fact:m7:b9:0-70",
+                    "meter": "m7",
+                    "source_id": "l1",
+                    "source_ids": [
+                      "l1",
+                      "l2"
+                    ],
+                    "source_coverage": [
+                      {
+                        "source_id": "l1",
+                        "start": "2026-10-31T23:59:25Z",
+                        "end": "2026-11-01T00:00:35Z"
+                      },
+                      {
+                        "source_id": "l2",
+                        "start": "2026-10-31T23:59:55Z",
+                        "end": "2026-11-01T00:00:35Z"
+                      }
+                    ],
+                    "lease_id": "a7",
+                    "start": "2026-10-31T23:59:25Z",
+                    "end": "2026-10-31T23:59:54Z",
+                    "device_seconds": 29,
+                    "share_percent": "100",
+                    "allocated_seconds": "29",
+                    "free_seconds": "23.6",
+                    "billable_seconds": "5.4"
+                  }
+                ],
+                "basis": [
+                  "half-open [start,end); overlapping logs deduplicated by state priority",
+                  "lease shares retained as exact Decimal fractions",
+                  "free quota ordered by occurrence second, meter, source id",
+                  "line total rounded once with ROUND_HALF_UP to whole cents"
+                ]
+              }
+            ]
+          },
+          "settling_receipt_ids": [],
+          "booked_after_creation_cents": 0,
+          "unposted_amount_cents": 25
+        },
+        {
+          "entry_id": "J-ADJ-2026-10-B-nov",
+          "kind": "closed_month_reconciliation",
+          "status": "pending_posting",
+          "for_month": "2026-10",
+          "book_month": "2026-11",
+          "contract": "B",
+          "amount_cents": 9,
+          "amount_exact_cents": "9.000",
+          "rounding": "ROUND_HALF_UP to whole cents on each journal/invoice line",
+          "created_seq": 18,
+          "close_id": "nov",
+          "reason": "Compare the corrected complete receivable for the original month with amounts actually posted; post this signed supplement/reversal in the next open book month.",
+          "basis": {
+            "original_close_id": "oct",
+            "original_receivable_cents": 9,
+            "original_exact_receivable_cents": "9.000",
+            "corrected_receivable_cents": 9,
+            "corrected_exact_receivable_cents": "9.000",
+            "posted_cents_at_calculation": 0,
+            "net_amount_cents": 9,
+            "net_exact_before_line_rounding_cents": "9.000",
+            "memo_booking_gap_original_minus_posted_cents": 9,
+            "memo_fact_correction_corrected_minus_original_cents": 0,
+            "memo_components": [
+              {
+                "component": "original_account_vs_posted",
+                "amount_cents": 9,
+                "meaning": "Would make posted ledger equal the original close account."
+              },
+              {
+                "component": "closed_month_fact_correction",
+                "amount_cents": 0,
+                "meaning": "Old-rate correction from original account to current old-month recomputation."
+              }
+            ],
+            "old_rates_only": true,
+            "posted_receipts": [],
+            "original_line_ids": [
+              "LINE-2026-10-B-20261001T000000Z-20270101T000000Z"
+            ],
+            "corrected_line_ids": [
+              "LINE-2026-10-B-20261001T000000Z-20270101T000000Z"
+            ],
+            "corrected_lines_at_calculation": [
+              {
+                "line_id": "LINE-2026-10-B-20261001T000000Z-20270101T000000Z",
+                "kind": "usage",
+                "contract": "B",
+                "for_month": "2026-10",
+                "book_month": "2026-10",
+                "rate": {
+                  "start": "2026-10-01T00:00:00Z",
+                  "end": "2027-01-01T00:00:00Z",
+                  "cents_per_sec": "0.75"
+                },
+                "exact_allocated_seconds": "22.0",
+                "free_seconds": "10.0",
+                "billable_seconds": "12.0",
+                "exact_amount_cents": "9.000",
+                "invoice_amount_cents": 9,
+                "coverage": [
+                  {
+                    "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491145-1793491200",
+                    "fact_id": "fact:m2:b3:0-100",
+                    "meter": "m2",
+                    "source_id": "l4",
+                    "source_ids": [
+                      "l4"
+                    ],
+                    "source_coverage": [
+                      {
+                        "source_id": "l4",
+                        "start": "2026-10-31T23:59:05Z",
+                        "end": "2026-11-01T00:00:45Z"
+                      }
+                    ],
+                    "lease_id": "b2",
+                    "start": "2026-10-31T23:59:05Z",
+                    "end": "2026-11-01T00:00:00Z",
+                    "device_seconds": 55,
+                    "share_percent": "40",
+                    "allocated_seconds": "22.0",
+                    "free_seconds": "10.0",
+                    "billable_seconds": "12.0"
+                  }
+                ],
+                "basis": [
+                  "half-open [start,end); overlapping logs deduplicated by state priority",
+                  "lease shares retained as exact Decimal fractions",
+                  "free quota ordered by occurrence second, meter, source id",
+                  "line total rounded once with ROUND_HALF_UP to whole cents"
+                ]
+              }
+            ]
+          },
+          "settling_receipt_ids": [],
+          "booked_after_creation_cents": 0,
+          "unposted_amount_cents": 9
+        }
+      ],
+      "receivable_exact_by_contract": {
+        "A": "178.500",
+        "B": "6.000"
+      },
+      "receivable_by_contract_cents": {
+        "A": 179,
+        "B": 6
+      },
+      "prior_month_adjustment_net_by_contract_cents": {
+        "A": 25,
+        "B": 9
+      },
+      "close_period_invoice_total_by_contract_cents": {
+        "A": 204,
+        "B": 15
+      },
+      "issue_ids_in_month": [
+        "ISS-e5ac55f75b84"
+      ],
+      "open_unclaimed": [],
+      "carried_unresolved_old_month_issues": [
+        {
+          "issue_id": "ISS-e5ac55f75b84",
+          "kind": "lease_conflict",
+          "blocking": true,
+          "meter": "m7",
+          "start": "2026-10-31T23:59:54Z",
+          "end": "2026-11-01T00:00:13Z",
+          "source_ids": [
+            "l1",
+            "l2"
+          ],
+          "lease_ids": [
+            "a7",
+            "b7"
+          ],
+          "contracts": [
+            "A",
+            "B"
+          ],
+          "fact_id": "fact:m7:b9:0-70",
+          "message": "valid dedicated/group leases collide; usage is preserved but not chosen",
+          "unclaimed_seconds": "0",
+          "source_closed_month": "2026-10",
+          "source_close_id": "oct",
+          "month_part_start": "2026-10-31T23:59:54Z",
+          "month_part_end": "2026-11-01T00:00:00Z"
+        }
+      ],
+      "original_basis": "Rates/free quota and effective facts as of this close; never replaced by a rerun."
+    }
+  },
+  "journal_entries": [
+    {
+      "entry_id": "J-ADJ-2026-10-A-nov",
+      "kind": "closed_month_reconciliation",
+      "status": "pending_posting",
+      "for_month": "2026-10",
+      "book_month": "2026-11",
+      "contract": "A",
+      "amount_cents": 25,
+      "amount_exact_cents": "25.000",
+      "rounding": "ROUND_HALF_UP to whole cents on each journal/invoice line",
+      "created_seq": 18,
+      "close_id": "nov",
+      "reason": "Compare the corrected complete receivable for the original month with amounts actually posted; post this signed supplement/reversal in the next open book month.",
+      "basis": {
+        "original_close_id": "oct",
+        "original_receivable_cents": 41,
+        "original_exact_receivable_cents": "41.250",
+        "corrected_receivable_cents": 15,
+        "corrected_exact_receivable_cents": "15.000",
+        "posted_cents_at_calculation": -10,
+        "net_amount_cents": 25,
+        "net_exact_before_line_rounding_cents": "25.000",
+        "memo_booking_gap_original_minus_posted_cents": 51,
+        "memo_fact_correction_corrected_minus_original_cents": -26,
+        "memo_components": [
+          {
+            "component": "original_account_vs_posted",
+            "amount_cents": 51,
+            "meaning": "Would make posted ledger equal the original close account."
+          },
+          {
+            "component": "closed_month_fact_correction",
+            "amount_cents": -26,
+            "meaning": "Old-rate correction from original account to current old-month recomputation."
+          }
+        ],
+        "old_rates_only": true,
+        "posted_receipts": [
+          {
+            "receipt_id": "erp-631",
+            "seq": 17,
+            "book_month": "2026-11",
+            "amount_cents": -10,
+            "origin": "external-invoice-6"
+          }
+        ],
+        "original_line_ids": [
+          "LINE-2026-10-A-20261001T000000Z-20261101T000000Z"
+        ],
+        "corrected_line_ids": [
+          "LINE-2026-10-A-20261001T000000Z-20261101T000000Z"
+        ],
+        "corrected_lines_at_calculation": [
+          {
+            "line_id": "LINE-2026-10-A-20261001T000000Z-20261101T000000Z",
+            "kind": "usage",
+            "contract": "A",
+            "for_month": "2026-10",
+            "book_month": "2026-10",
+            "rate": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2026-11-01T00:00:00Z",
+              "cents_per_sec": "1.25"
+            },
+            "exact_allocated_seconds": "62.0",
+            "free_seconds": "50.0",
+            "billable_seconds": "12.0",
+            "exact_amount_cents": "15.000",
+            "invoice_amount_cents": 15,
+            "coverage": [
+              {
+                "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:a2:1793491145-1793491200",
+                "fact_id": "fact:m2:b3:0-100",
+                "meter": "m2",
+                "source_id": "l4",
+                "source_ids": [
+                  "l4"
+                ],
+                "source_coverage": [
+                  {
+                    "source_id": "l4",
+                    "start": "2026-10-31T23:59:05Z",
+                    "end": "2026-11-01T00:00:45Z"
+                  }
+                ],
+                "lease_id": "a2",
+                "start": "2026-10-31T23:59:05Z",
+                "end": "2026-11-01T00:00:00Z",
+                "device_seconds": 55,
+                "share_percent": "60",
+                "allocated_seconds": "33.0",
+                "free_seconds": "26.4",
+                "billable_seconds": "6.6"
+              },
+              {
+                "atom_id": "atom:resp:b9:0-70:1793491165-1793491194:a7:1793491165-1793491194",
+                "fact_id": "fact:m7:b9:0-70",
+                "meter": "m7",
+                "source_id": "l1",
+                "source_ids": [
+                  "l1",
+                  "l2"
+                ],
+                "source_coverage": [
+                  {
+                    "source_id": "l1",
+                    "start": "2026-10-31T23:59:25Z",
+                    "end": "2026-11-01T00:00:35Z"
+                  },
+                  {
+                    "source_id": "l2",
+                    "start": "2026-10-31T23:59:55Z",
+                    "end": "2026-11-01T00:00:35Z"
+                  }
+                ],
+                "lease_id": "a7",
+                "start": "2026-10-31T23:59:25Z",
+                "end": "2026-10-31T23:59:54Z",
+                "device_seconds": 29,
+                "share_percent": "100",
+                "allocated_seconds": "29",
+                "free_seconds": "23.6",
+                "billable_seconds": "5.4"
+              }
+            ],
+            "basis": [
+              "half-open [start,end); overlapping logs deduplicated by state priority",
+              "lease shares retained as exact Decimal fractions",
+              "free quota ordered by occurrence second, meter, source id",
+              "line total rounded once with ROUND_HALF_UP to whole cents"
+            ]
+          }
+        ]
+      },
+      "settling_receipt_ids": [],
+      "booked_after_creation_cents": 0,
+      "unposted_amount_cents": 25
+    },
+    {
+      "entry_id": "J-ADJ-2026-10-B-nov",
+      "kind": "closed_month_reconciliation",
+      "status": "pending_posting",
+      "for_month": "2026-10",
+      "book_month": "2026-11",
+      "contract": "B",
+      "amount_cents": 9,
+      "amount_exact_cents": "9.000",
+      "rounding": "ROUND_HALF_UP to whole cents on each journal/invoice line",
+      "created_seq": 18,
+      "close_id": "nov",
+      "reason": "Compare the corrected complete receivable for the original month with amounts actually posted; post this signed supplement/reversal in the next open book month.",
+      "basis": {
+        "original_close_id": "oct",
+        "original_receivable_cents": 9,
+        "original_exact_receivable_cents": "9.000",
+        "corrected_receivable_cents": 9,
+        "corrected_exact_receivable_cents": "9.000",
+        "posted_cents_at_calculation": 0,
+        "net_amount_cents": 9,
+        "net_exact_before_line_rounding_cents": "9.000",
+        "memo_booking_gap_original_minus_posted_cents": 9,
+        "memo_fact_correction_corrected_minus_original_cents": 0,
+        "memo_components": [
+          {
+            "component": "original_account_vs_posted",
+            "amount_cents": 9,
+            "meaning": "Would make posted ledger equal the original close account."
+          },
+          {
+            "component": "closed_month_fact_correction",
+            "amount_cents": 0,
+            "meaning": "Old-rate correction from original account to current old-month recomputation."
+          }
+        ],
+        "old_rates_only": true,
+        "posted_receipts": [],
+        "original_line_ids": [
+          "LINE-2026-10-B-20261001T000000Z-20270101T000000Z"
+        ],
+        "corrected_line_ids": [
+          "LINE-2026-10-B-20261001T000000Z-20270101T000000Z"
+        ],
+        "corrected_lines_at_calculation": [
+          {
+            "line_id": "LINE-2026-10-B-20261001T000000Z-20270101T000000Z",
+            "kind": "usage",
+            "contract": "B",
+            "for_month": "2026-10",
+            "book_month": "2026-10",
+            "rate": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2027-01-01T00:00:00Z",
+              "cents_per_sec": "0.75"
+            },
+            "exact_allocated_seconds": "22.0",
+            "free_seconds": "10.0",
+            "billable_seconds": "12.0",
+            "exact_amount_cents": "9.000",
+            "invoice_amount_cents": 9,
+            "coverage": [
+              {
+                "atom_id": "atom:resp:b3:0-100:1793491145-1793491245:b2:1793491145-1793491200",
+                "fact_id": "fact:m2:b3:0-100",
+                "meter": "m2",
+                "source_id": "l4",
+                "source_ids": [
+                  "l4"
+                ],
+                "source_coverage": [
+                  {
+                    "source_id": "l4",
+                    "start": "2026-10-31T23:59:05Z",
+                    "end": "2026-11-01T00:00:45Z"
+                  }
+                ],
+                "lease_id": "b2",
+                "start": "2026-10-31T23:59:05Z",
+                "end": "2026-11-01T00:00:00Z",
+                "device_seconds": 55,
+                "share_percent": "40",
+                "allocated_seconds": "22.0",
+                "free_seconds": "10.0",
+                "billable_seconds": "12.0"
+              }
+            ],
+            "basis": [
+              "half-open [start,end); overlapping logs deduplicated by state priority",
+              "lease shares retained as exact Decimal fractions",
+              "free quota ordered by occurrence second, meter, source id",
+              "line total rounded once with ROUND_HALF_UP to whole cents"
+            ]
+          }
+        ]
+      },
+      "settling_receipt_ids": [],
+      "booked_after_creation_cents": 0,
+      "unposted_amount_cents": 9
+    }
+  ],
+  "close_attempts": [
+    {
+      "close_id": "oct",
+      "month": "2026-10",
+      "seq": 14,
+      "status": "closed"
+    },
+    {
+      "close_id": "nov",
+      "month": "2026-11",
+      "seq": 18,
+      "status": "closed"
+    }
+  ],
+  "posted_conflicts": {}
+}
